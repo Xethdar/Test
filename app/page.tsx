@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { BarChart3, Shield, TrendingUp, Clock, ChevronDown } from "lucide-react"
+import { BarChart3, Shield, TrendingUp, ChevronDown, CheckCircle } from "lucide-react"
 import { useActionState } from "react"
 import { addToWaitlist } from "./actions"
 
@@ -28,6 +28,8 @@ const ScrollToSectionCenter = (id: string) => {
 export default function LandingPage() {
   const [email, setEmail] = useState("")
   const [state, formAction, isPending] = useActionState(addToWaitlist, null)
+  const [showThankYou, setShowThankYou] = useState(false)
+  const [animateCheckmark, setAnimateCheckmark] = useState(false)
 
   // Show toast notification when state changes
   useEffect(() => {
@@ -39,6 +41,8 @@ export default function LandingPage() {
         })
         // Clear email input on success
         setEmail("")
+        setShowThankYou(true)
+        setAnimateCheckmark(true)
       } else {
         toast({
           title: "Error",
@@ -89,11 +93,11 @@ export default function LandingPage() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    Simplifying Bond Investments for Everyone
+                    Buying Bonds is Hard, We Want to Make it Easy
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                    Slicktunnel makes investing in bonds accessible, transparent, and efficient. Join our waitlist for
-                    early access.
+                    SlickTunnel wants to simplify and guide everyday people through buying one of the safest and largest
+                    asset classes in the world— bonds.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -146,9 +150,10 @@ export default function LandingPage() {
                     <BarChart3 className="h-5 w-5" />
                   </div>
                   <div className="space-y-1">
-                    <h3 className="text-xl font-bold">Market Analytics</h3>
+                    <h3 className="text-xl font-bold">Digestable Information</h3>
                     <p className="text-muted-foreground">
-                      Real-time bond market data and analytics to help you make informed investment decisions.
+                      Most platforms use jargon and language meant to confuse everyday people. SlickTunnel explains and
+                      displays data in an easy-to-understand interface.
                     </p>
                   </div>
                 </div>
@@ -157,9 +162,10 @@ export default function LandingPage() {
                     <Shield className="h-5 w-5" />
                   </div>
                   <div className="space-y-1">
-                    <h3 className="text-xl font-bold">Secure Investments</h3>
+                    <h3 className="text-xl font-bold">Simplified Guidance</h3>
                     <p className="text-muted-foreground">
-                      Bank-level security protocols to ensure your investments and personal data are protected.
+                      We'll take you through the process of buying a bond, start to finish--handholding throughout the
+                      process.
                     </p>
                   </div>
                 </div>
@@ -172,18 +178,20 @@ export default function LandingPage() {
                   <div className="space-y-1">
                     <h3 className="text-xl font-bold">Diversified Portfolio</h3>
                     <p className="text-muted-foreground">
-                      Access to a wide range of bonds from government, corporate, and municipal issuers.
+                      Access to a wide range of bonds from government, corporate, and municipal issuers. We aggregate
+                      from many different sources; displaying all sorts of bonds on one platform.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                    <Clock className="h-5 w-5" />
+                    <Shield className="h-5 w-5" />
                   </div>
                   <div className="space-y-1">
-                    <h3 className="text-xl font-bold">Efficient Trading</h3>
+                    <h3 className="text-xl font-bold">Secure Investments</h3>
                     <p className="text-muted-foreground">
-                      Fast and cost-effective bond trading with transparent pricing and low fees.
+                      In volatile times like these, bonds are a great alternative for those seeking stability in their
+                      investments.
                     </p>
                   </div>
                 </div>
@@ -250,24 +258,35 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <form action={formAction} className="flex flex-col gap-2 sm:flex-row">
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    className="max-w-lg flex-1 bg-primary-foreground text-background"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                  <Button type="submit" variant="secondary" disabled={isPending}>
-                    {isPending ? "Submitting..." : "Join Now"}
-                  </Button>
-                </form>
-                {state && (
-                  <p className={`text-sm ${state.success ? "text-green-200" : "text-red-200"}`}>{state.message}</p>
+                {showThankYou ? (
+                  <div className="flex flex-col items-center justify-center space-y-6 py-8">
+                    <div
+                      className={`transition-all duration-1000 ${animateCheckmark ? "scale-100 opacity-100" : "scale-0 opacity-0"}`}
+                    >
+                      <CheckCircle className="h-24 w-24 text-green-300" />
+                    </div>
+                    <h3 className="text-2xl font-bold">Thank you for joining!</h3>
+                    <p className="text-lg opacity-90">
+                      We'll keep you updated on our launch and exclusive early access opportunities.
+                    </p>
+                  </div>
+                ) : (
+                  <form action={formAction} className="flex flex-col gap-2 sm:flex-row">
+                    <Input
+                      type="email"
+                      name="email"
+                      placeholder="Enter your email"
+                      className="max-w-lg flex-1 bg-primary-foreground text-background"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
+                    <Button type="submit" variant="secondary" disabled={isPending}>
+                      {isPending ? "Submitting..." : "Join Now"}
+                    </Button>
+                  </form>
                 )}
-                <p className="text-xs opacity-80">We respect your privacy. No spam, ever.</p>
+                {!showThankYou && <p className="text-xs opacity-80">We respect your privacy. No spam, ever.</p>}
               </div>
             </div>
           </div>
