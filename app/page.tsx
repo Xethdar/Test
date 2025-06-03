@@ -259,7 +259,7 @@ export default function LandingPage() {
               </div>
               <div className="w-full max-w-sm space-y-2">
                 {showThankYou ? (
-                  <div className="flex flex-col items-center justify-center space-y-6 py-8">
+                  <div className="flex flex-col items-center justify-center space-y-6 py-0">
                     <div
                       className={`transition-all duration-1000 ${animateCheckmark ? "scale-100 opacity-100" : "scale-0 opacity-0"}`}
                     >
