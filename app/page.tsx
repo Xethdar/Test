@@ -1,10 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import type React from "react"
+
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { BarChart3, Shield, TrendingUp, ChevronDown, CheckCircle } from "lucide-react"
-import { useActionState } from "react"
 import { addToWaitlist } from "./actions"
 
 import { Button } from "@/components/ui/button"
@@ -27,31 +28,45 @@ const ScrollToSectionCenter = (id: string) => {
 
 export default function LandingPage() {
   const [email, setEmail] = useState("")
-  const [state, formAction, isPending] = useActionState(addToWaitlist, null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [showThankYou, setShowThankYou] = useState(false)
   const [animateCheckmark, setAnimateCheckmark] = useState(false)
 
-  // Show toast notification when state changes
-  useEffect(() => {
-    if (state) {
-      if (state.success) {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    try {
+      const formData = new FormData()
+      formData.append("email", email)
+
+      const result = await addToWaitlist(null, formData)
+
+      if (result.success) {
         toast({
           title: "Success!",
-          description: state.message,
+          description: result.message,
         })
-        // Clear email input on success
         setEmail("")
         setShowThankYou(true)
         setAnimateCheckmark(true)
       } else {
         toast({
           title: "Error",
-          description: state.message,
+          description: result.message,
           variant: "destructive",
         })
       }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
     }
-  }, [state])
+  }
 
   return (
     <div className="flex min-h-[100dvh] flex-col">
@@ -239,7 +254,8 @@ export default function LandingPage() {
                   </div>
                   <h3 className="text-xl font-bold">Invest & Track</h3>
                   <p className="text-muted-foreground">
-                    We’ll guide you through the process to buy your desired bonds, giving step by step instructions throughout the journey. Monitor your portfolio performance with our intuitive dashboard.
+                    We'll guide you through the process to buy your desired bonds, giving step by step instructions
+                    throughout the journey. Monitor your portfolio performance with our intuitive dashboard.
                   </p>
                 </div>
               </div>
@@ -253,7 +269,8 @@ export default function LandingPage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Join Our Waitlist</h2>
                 <p className="mx-auto max-w-[700px] md:text-xl/relaxed opacity-90">
-                  Be among the first to access our platform when we launch. Early members will have a say in how our platform develops
+                  Be among the first to access our platform when we launch. Early members will have a say in how our
+                  platform develops
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
@@ -270,7 +287,7 @@ export default function LandingPage() {
                     </p>
                   </div>
                 ) : (
-                  <form action={formAction} className="flex flex-col gap-2 sm:flex-row">
+                  <form onSubmit={handleSubmit} className="flex flex-col gap-2 sm:flex-row">
                     <Input
                       type="email"
                       name="email"
@@ -280,8 +297,8 @@ export default function LandingPage() {
                       onChange={(e) => setEmail(e.target.value)}
                       required
                     />
-                    <Button type="submit" variant="secondary" disabled={isPending}>
-                      {isPending ? "Submitting..." : "Join Now"}
+                    <Button type="submit" variant="secondary" disabled={isSubmitting}>
+                      {isSubmitting ? "Submitting..." : "Join Now"}
                     </Button>
                   </form>
                 )}
@@ -361,8 +378,7 @@ const faqItems = [
   },
   {
     question: "When will SlickTunnel officially launch?",
-    answer:
-      "Very Soon. We'll email you. ",
+    answer: "Very Soon. We'll email you. ",
   },
   {
     question: "What fees does SlickTunnel charge?",
