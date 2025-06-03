@@ -347,26 +347,26 @@ const faqItems = [
   {
     question: "What types of bonds can I invest in through SlickTunnel?",
     answer:
-      "SlickTunnel offers access to a wide range of bonds including government bonds, corporate bonds, municipal bonds, and treasury securities. Our platform is designed to provide options for different risk appetites and investment goals.",
+      "SlickTunnel offers data on a wide range of bonds including government bonds, corporate bonds, municipal bonds, and treasury securities. Our platform is built to offer investments to a variety of risk apetities and investment goals. SlickTunnel is not a bank, broker, or issuer of bonds; We simply collect and host data regarding bonds, display it in a digestible and understandable fashion, and guide users through the process up until purchase.",
   },
   {
     question: "What are the minimum investment requirements?",
     answer:
-      "Our platform is designed to make bond investing accessible with lower minimum investments than traditional channels. You can start investing with as little as $100 for certain bond offerings.",
+      "SlickTunnel does not have any investment requirements. This may vary based on the broker, issuer, or entity selling the bond. ",
   },
   {
     question: "How does SlickTunnel ensure the security of my investments?",
     answer:
-      "We implement bank-level security protocols, including 256-bit encryption, two-factor authentication, and regular security audits. All investments are held in segregated accounts and are SIPC insured up to applicable limits.",
+      "SlickTunnel only works with trusted and credible brokers and institutions, We do not conduct transactions but work with partners with strong user security on their platforms. To keep you informed , we also  ",
   },
   {
     question: "When will SlickTunnel officially launch?",
     answer:
-      "We're currently in the final stages of development and regulatory approval. We expect to launch in Q3 2023. Join our waitlist to be notified when we go live and to receive early access.",
+      "Very Soon. We’ll email you. ",
   },
   {
     question: "What fees does SlickTunnel charge?",
     answer:
-      "We believe in transparent pricing. SlickTunnel charges a small commission on bond transactions (typically 0.1-0.3% depending on bond type) and no management fees for holding bonds in your portfolio.",
+      "We plan to make our income by gaining a small commission from brokerages if a sale happens through us. This will be at zero cost to the user.",
   },
 ]
