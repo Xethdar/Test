@@ -292,55 +292,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
-                  Testimonials
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">What Our Beta Users Say</h2>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:gap-12">
-              <div className="flex flex-col justify-between gap-4 rounded-lg border p-6">
-                <div>
-                  <p className="text-muted-foreground">
-                    "Slicktunnel has transformed how I approach fixed income investments. The platform is intuitive and
-                    provides all the information I need to make informed decisions."
-                  </p>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="rounded-full bg-muted p-1">
-                    <div className="h-8 w-8 rounded-full bg-gray-200" />
-                  </div>
-                  <div>
-                    <p className="font-medium">Sarah Johnson</p>
-                    <p className="text-sm text-muted-foreground">Financial Advisor</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col justify-between gap-4 rounded-lg border p-6">
-                <div>
-                  <p className="text-muted-foreground">
-                    "As someone new to bond investing, I found Slicktunnel incredibly accessible. The educational
-                    resources and user-friendly interface made it easy to get started."
-                  </p>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="rounded-full bg-muted p-1">
-                    <div className="h-8 w-8 rounded-full bg-gray-200" />
-                  </div>
-                  <div>
-                    <p className="font-medium">Michael Chen</p>
-                    <p className="text-sm text-muted-foreground">Retail Investor</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
