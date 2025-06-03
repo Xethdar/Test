@@ -362,7 +362,7 @@ const faqItems = [
   {
     question: "When will SlickTunnel officially launch?",
     answer:
-      "Very Soon. We’ll email you. ",
+      "Very Soon. We'll email you. ",
   },
   {
     question: "What fees does SlickTunnel charge?",
