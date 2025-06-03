@@ -120,7 +120,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <Image
-                src="/placeholder.svg?height=550&width=550"
+                src="/CaptainBond.png?height=550&width=550"
                 width={550}
                 height={550}
                 alt="Bond Investment Dashboard"
