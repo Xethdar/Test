@@ -1,13 +1,16 @@
 import { MongoClient } from "mongodb"
 
-if (!process.env.MongoDBURL) {
-  throw new Error("Please add your MongoDB connection string to .env.local")
+const uri =
+  process.env.MongoDBURL ||
+  "mongodb+srv://MacauleyBarnhardt:Kata7397@cluster0.8txhb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
+if (!uri) {
+  throw new Error("Please add your MongoDB connection string to environment variables")
 }
 
-const uri = process.env.MongoDBURL
 const options = {}
 
-let client
+let client: MongoClient
 let clientPromise: Promise<MongoClient>
 
 if (process.env.NODE_ENV === "development") {
