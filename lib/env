@@ -1,1 +1,1 @@
-
+MongoDBURL = mongodb+srv://<Xethdar>:<Kata7397>@cluster0.mongodb.net/Slicktunnel_Deployed?retryWrites=true&w=majority
