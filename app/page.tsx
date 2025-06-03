@@ -97,7 +97,7 @@ export default function LandingPage() {
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
                     SlickTunnel wants to simplify and guide everyday people through buying one of the safest and largest
-                    asset classes in the world— bonds.
+                    asset classes in the world— Bonds.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -137,7 +137,7 @@ export default function LandingPage() {
                 <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
                   Features
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Why Choose Slicktunnel?</h2>
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Why Choose SlickTunnel?</h2>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
                   Our platform is designed to make bond investing simple, transparent, and accessible to everyone.
                 </p>
@@ -207,7 +207,7 @@ export default function LandingPage() {
                 <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
                   Process
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">How Slicktunnel Works</h2>
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">How SlickTunnel Works</h2>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
                   Our streamlined process makes bond investing accessible to everyone.
                 </p>
@@ -239,7 +239,7 @@ export default function LandingPage() {
                   </div>
                   <h3 className="text-xl font-bold">Invest & Track</h3>
                   <p className="text-muted-foreground">
-                    Purchase bonds and monitor your portfolio performance with our intuitive dashboard.
+                    We’ll guide you through the process to buy your desired bonds, giving step by step instructions throughout the journey. Monitor your portfolio performance with our intuitive dashboard.
                   </p>
                 </div>
               </div>
@@ -253,8 +253,7 @@ export default function LandingPage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Join Our Waitlist</h2>
                 <p className="mx-auto max-w-[700px] md:text-xl/relaxed opacity-90">
-                  Be among the first to access our platform when we launch. Early members will receive exclusive
-                  benefits.
+                  Be among the first to access our platform when we launch. Early members will have a say in how our platform develops
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
@@ -320,7 +319,7 @@ export default function LandingPage() {
         <div className="container flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between md:py-12">
           <div className="flex items-center gap-2">
             <TrendingUp className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">Slicktunnel</span>
+            <span className="text-xl font-bold">SlickTunnel</span>
           </div>
           <nav className="flex gap-4 sm:gap-6">
             <Link href="#" className="text-sm font-medium hover:underline">
@@ -335,7 +334,7 @@ export default function LandingPage() {
           </nav>
           <div className="flex items-center">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Slicktunnel. All rights reserved.
+              © {new Date().getFullYear()} SlickTunnel. All rights reserved.
             </p>
           </div>
         </div>
@@ -346,9 +345,9 @@ export default function LandingPage() {
 
 const faqItems = [
   {
-    question: "What types of bonds can I invest in through Slicktunnel?",
+    question: "What types of bonds can I invest in through SlickTunnel?",
     answer:
-      "Slicktunnel offers access to a wide range of bonds including government bonds, corporate bonds, municipal bonds, and treasury securities. Our platform is designed to provide options for different risk appetites and investment goals.",
+      "SlickTunnel offers access to a wide range of bonds including government bonds, corporate bonds, municipal bonds, and treasury securities. Our platform is designed to provide options for different risk appetites and investment goals.",
   },
   {
     question: "What are the minimum investment requirements?",
@@ -356,18 +355,18 @@ const faqItems = [
       "Our platform is designed to make bond investing accessible with lower minimum investments than traditional channels. You can start investing with as little as $100 for certain bond offerings.",
   },
   {
-    question: "How does Slicktunnel ensure the security of my investments?",
+    question: "How does SlickTunnel ensure the security of my investments?",
     answer:
       "We implement bank-level security protocols, including 256-bit encryption, two-factor authentication, and regular security audits. All investments are held in segregated accounts and are SIPC insured up to applicable limits.",
   },
   {
-    question: "When will Slicktunnel officially launch?",
+    question: "When will SlickTunnel officially launch?",
     answer:
       "We're currently in the final stages of development and regulatory approval. We expect to launch in Q3 2023. Join our waitlist to be notified when we go live and to receive early access.",
   },
   {
-    question: "What fees does Slicktunnel charge?",
+    question: "What fees does SlickTunnel charge?",
     answer:
-      "We believe in transparent pricing. Slicktunnel charges a small commission on bond transactions (typically 0.1-0.3% depending on bond type) and no management fees for holding bonds in your portfolio.",
+      "We believe in transparent pricing. SlickTunnel charges a small commission on bond transactions (typically 0.1-0.3% depending on bond type) and no management fees for holding bonds in your portfolio.",
   },
 ]
