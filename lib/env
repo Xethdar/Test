@@ -1,1 +1,1 @@
-MongoDBURL = mongodb+srv://<MacauleyBarnhardt@woodstock.ac.in>:<Kata7397>@cluster0.mongodb.net/Slicktunnel_Deployed?retryWrites=true&w=majority
+MongoDBURL = mongodb+srv://MacauleyBarnhardt:Kata7397@cluster0.8txhb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
