@@ -64,7 +64,7 @@ export default function SurveyPage() {
                 height: "250px",
                 width: "1px",
                 position: "fixed",
-                marginTop: "2rem"
+                marginTop: "1.5rem"
               }} />
             </motion.div>
 
@@ -100,7 +100,7 @@ export default function SurveyPage() {
                 height: "250px",
                 width: "1px",
                 position: "fixed",
-                marginTop: "2rem"
+                marginTop: "1.5rem"
               }} />
             </motion.div>
           </div>
