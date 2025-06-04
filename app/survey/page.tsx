@@ -58,7 +58,7 @@ export default function SurveyPage() {
           marginHeight={0}
           marginWidth={0}
           title="SlickTunnel Alpha Feedback"
-          style={{ border: 'none', maxHeight: "2500px", scrollBehavior: "smooth", pointerEvents: "auto", marginLeft: "24%", marginRight: "50px", maxWidth: "750px"}}
+          style={{ border: 'none', maxHeight: "2500px", scrollBehavior: "smooth", pointerEvents: "auto", maxWidth: "750px"}}
         ></iframe>
 
           {/* Additional Information */}
