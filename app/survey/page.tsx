@@ -52,7 +52,6 @@ export default function SurveyPage() {
           <div className="flex justify-center px-4 py-12">
             <iframe
               data-tally-src="https://tally.so/embed/3X1x8j?hideTitle=1&transparentBackground=1&dynamicHeight=1"
-              loading="lazy"
               width="100%"
               height="fit-content"
               frameBorder="0"
