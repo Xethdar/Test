@@ -4,8 +4,11 @@ import Link from "next/link"
 import { TrendingUp, ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
+import * as motion from "motion/react-client";
+import { AnimatePresence } from "motion/react";
 
 export default function SurveyPage() {
+  const [isVisible, setisVisible] = useState(false)
 
   useEffect(() => {
     // Load Tally embed script once on mount
@@ -49,22 +52,40 @@ export default function SurveyPage() {
           </div>
 
           {/* Tally Form Container */}
-          <div className="flex justify-center px-4 py-0">
-            <iframe
-              data-tally-src="https://tally.so/embed/mZKpjv?alignLeft=1&hideTitle=1&dynamicHeight=1"
-              width="100%"
-              height="fit-content"
-              frameBorder="0"
-              title="SlickTunnel Alpha Feedback"
-              style={{
-                border: 'none',
-                maxHeight: '2500px',
-                scrollBehavior: 'smooth',
-                pointerEvents: 'auto',
-                maxWidth: '750px', // Controls the width of the form
-              }}
-            ></iframe>
-          </div>
+          <div style={{display: "flex", minHeight: "620px"}}>
+          <motion.div
+          initial={{opacity: 0}}
+          animate={{ opacity: isVisible ? "100%" : "0%"}}
+          transition={{ type: "tween", duration: 0.2 }}>
+            <div style={{backgroundColor: "#00ff7f", maxHeight: "500px", minWidth: "0.5px", marginLeft: "21%", position: "fixed", minHeight: "500px", marginTop: "60px"}}/>
+          </motion.div>
+          <iframe
+          data-tally-src="https://tally.so/embed/mZKpjv?alignLeft=1&hideTitle=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="fit-content"
+          frameBorder="0"
+          marginHeight={0}
+          marginWidth={0}
+          title="SlickTunnel Alpha Feedback"
+          style={{ border: 'none', maxHeight: "2500px", scrollBehavior: "smooth", pointerEvents: "auto", marginLeft: "24%", marginRight: "50px", maxWidth: "750px"}}
+          onMouseEnter={() => setisVisible(true)} 
+          onMouseLeave={() => setisVisible(false)}
+        ></iframe>
+        <motion.div
+          initial={{opacity: 0}}
+          animate={{ opacity: isVisible ? 1 : 0}}
+          transition={{ type: "tween", duration: 0.2 }}>
+          <div style={{
+            backgroundColor: "#00ff7f", 
+            maxHeight: "500px", 
+            minWidth: "0.5px", 
+            marginRight: "25%", 
+            position: "fixed", 
+            minHeight: "500px", 
+            marginTop: "60px",}}/>
+        </motion.div>
+        </div>
 
           {/* Additional Information */}
           <div className="text-center mt-8 mb-16">
