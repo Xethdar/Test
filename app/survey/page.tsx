@@ -99,7 +99,7 @@ export default function SurveyPage() {
                 backgroundColor: "#00ff7f",
                 height: "100px",
                 width: "1px",
-                position: "fixed"
+                position: "fixed",
                 marginTop: "4.4rem"
               }} />
             </motion.div>
