@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button"
 export default function SurveyPage() {
   return (
     <div className="flex min-h-[100dvh] flex-col">
-      {/* Header with Logo */}
-      <header className="w-full border-b bg-background">
+      {/* Fixed/Sticky Header with Logo */}
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <TrendingUp className="h-6 w-6 text-primary" />
@@ -24,8 +24,8 @@ export default function SurveyPage() {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 flex items-center justify-center p-4">
-        <div className="w-full max-w-4xl mx-auto">
+      <main className="flex-1 p-4">
+        <div className="w-full max-w-4xl mx-auto pt-8">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold tracking-tighter mb-4">Help Us Build Better Features</h1>
             <p className="text-muted-foreground text-lg mb-6">
@@ -53,7 +53,7 @@ export default function SurveyPage() {
           </div>
 
           {/* Additional Information */}
-          <div className="text-center mt-8">
+          <div className="text-center mt-8 mb-16">
             <p className="text-sm text-muted-foreground">
               This survey should take approximately 3-5 minutes to complete.
             </p>

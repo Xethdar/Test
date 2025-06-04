@@ -25,11 +25,25 @@ const ScrollToSectionCenter = (id: string) => {
   }
 }
 
+// Generate a simple token
+const generateToken = () => {
+  return "st_" + Math.random().toString(36).substr(2, 9) + Date.now().toString(36)
+}
+
 export default function LandingPage() {
   const [email, setEmail] = useState("")
   const [state, formAction, isPending] = useActionState(addToWaitlist, null)
   const [showThankYou, setShowThankYou] = useState(false)
   const [animateCheckmark, setAnimateCheckmark] = useState(false)
+  const [hasToken, setHasToken] = useState(false)
+
+  // Check for existing token on component mount
+  useEffect(() => {
+    const token = localStorage.getItem("slicktunnel_token")
+    if (token) {
+      setHasToken(true)
+    }
+  }, [])
 
   // Show toast notification when state changes
   useEffect(() => {
@@ -43,6 +57,11 @@ export default function LandingPage() {
         setEmail("")
         setShowThankYou(true)
         setAnimateCheckmark(true)
+
+        // Generate and store token
+        const token = generateToken()
+        localStorage.setItem("slicktunnel_token", token)
+        setHasToken(true)
       } else {
         toast({
           title: "Error",
@@ -259,22 +278,37 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                {showThankYou ? (
+                {showThankYou || hasToken ? (
                   <div className="flex flex-col items-center justify-center space-y-6 py-0">
-                    <div
-                      className={`transition-all duration-1000 ${animateCheckmark ? "scale-100 opacity-100" : "scale-0 opacity-0"}`}
-                      style={{ display: "flex" }}
-                    >
-                      <CheckCircle className="h-24 w-24 text-green-300" />
-                    </div>
-                    <h3 className="text-2xl font-bold">Thank you for joining!</h3>
-                    <p className="text-lg opacity-90">
-                      Help in the development of our site here
-                    </p>
-                    <div className="pt-4">
+                    {showThankYou && (
+                      <div
+                        className={`transition-all duration-1000 ${animateCheckmark ? "scale-100 opacity-100" : "scale-0 opacity-0"}`}
+                        style={{ display: "flex" }}
+                      >
+                        <CheckCircle className="h-24 w-24 text-green-300" />
+                      </div>
+                    )}
+                    <h3 className="text-2xl font-bold">{showThankYou ? "Thank you for joining!" : "Welcome back!"}</h3>
+                    <p className="text-lg opacity-90">Help in the development of our site here</p>
+                    <div className="pt-4 space-y-3">
                       <Button asChild variant="secondary" size="lg">
-                        <Link href="/survey">Share you ideas and opinions</Link>
+                        <Link href="/survey">Share your ideas and opinions</Link>
                       </Button>
+                      {hasToken && !showThankYou && (
+                        <div>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => {
+                              setShowThankYou(false)
+                              setHasToken(false)
+                            }}
+                            className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                          >
+                            Join waitlist again
+                          </Button>
+                        </div>
+                      )}
                     </div>
                   </div>
                 ) : (
@@ -293,7 +327,9 @@ export default function LandingPage() {
                     </Button>
                   </form>
                 )}
-                {!showThankYou && <p className="text-xs opacity-80">We respect your privacy. No spam, ever.</p>}
+                {!showThankYou && !hasToken && (
+                  <p className="text-xs opacity-80">We respect your privacy. No spam, ever.</p>
+                )}
               </div>
             </div>
           </div>
