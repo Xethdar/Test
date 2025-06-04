@@ -59,8 +59,6 @@ export default function SurveyPage() {
           marginWidth={0}
           title="SlickTunnel Alpha Feedback"
           style={{ border: 'none', maxHeight: "2500px", scrollBehavior: "smooth", pointerEvents: "auto", marginLeft: "24%", marginRight: "50px", maxWidth: "750px"}}
-          onMouseEnter={() => setisVisible(true)} 
-          onMouseLeave={() => setisVisible(false)}
         ></iframe>
 
           {/* Additional Information */}
