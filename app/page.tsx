@@ -264,9 +264,6 @@ export default function LandingPage() {
                       style={{ display: 'flex' }}
                     >
                       <CheckCircle className="h-24 w-24 text-green-300" />
-                      <div>
-                        hi
-                      </div>
                     </div>
                     <h3 className="text-2xl font-bold">Thank you for joining!</h3>
                     <p className="text-lg opacity-90">
