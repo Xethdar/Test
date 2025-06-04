@@ -261,8 +261,12 @@ export default function LandingPage() {
                   <div className="flex flex-col items-center justify-center space-y-6 py-0">
                     <div
                       className={`transition-all duration-1000 ${animateCheckmark ? "scale-100 opacity-100" : "scale-0 opacity-0"}`}
+                      style={{ display: 'flex' }}
                     >
                       <CheckCircle className="h-24 w-24 text-green-300" />
+                      <div>
+                        hi
+                      </div>
                     </div>
                     <h3 className="text-2xl font-bold">Thank you for joining!</h3>
                     <p className="text-lg opacity-90">
