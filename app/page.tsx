@@ -325,7 +325,6 @@ export default function LandingPage() {
                     <Button type="submit" variant="secondary" disabled={isPending}>
                       {isPending ? "Submitting..." : "Join Now"}
                     </Button>
-                    <Link href="/survey">Share your ideas and opinions</Link>
                   </form>
                 )}
                 {!showThankYou && !hasToken && (
