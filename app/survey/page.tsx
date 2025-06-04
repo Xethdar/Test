@@ -49,16 +49,18 @@ export default function SurveyPage() {
           </div>
 
           {/* Tally Form Container */}
-          <iframe
-            data-tally-src="https://tally.so/embed/mZKpjv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-            loading="lazy"
-            width="100%"
-            height="400"
-            frameBorder="0"
-            marginHeight={0}
-            marginWidth={0}
-            title="SlickTunnel LandingPage Feedback"
-          ></iframe>
+          <div className="w-full max-w-3xl mx-auto">
+            <iframe
+              data-tally-src="https://tally.so/embed/mZKpjv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+              loading="lazy"
+              width="100%"
+              height="400"
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+              title="SlickTunnel LandingPage Feedback"
+            ></iframe>
+          </div>
 
           {/* Additional Information */}
           <div className="text-center mt-8 mb-16">
