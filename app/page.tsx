@@ -269,11 +269,11 @@ export default function LandingPage() {
                     </div>
                     <h3 className="text-2xl font-bold">Thank you for joining!</h3>
                     <p className="text-lg opacity-90">
-                      We'll keep you updated on our launch and exclusive early access opportunities.
+                      Help in the development of our site here
                     </p>
                     <div className="pt-4">
                       <Button asChild variant="secondary" size="lg">
-                        <Link href="/survey">Help Us Build Better Features</Link>
+                        <Link href="/survey">Share you ideas and opinions</Link>
                       </Button>
                     </div>
                   </div>
