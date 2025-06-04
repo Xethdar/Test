@@ -5,6 +5,19 @@ import { TrendingUp, ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function SurveyPage() {
+
+  useEffect(() => {
+    // Load Tally embed script once on mount
+    const script = document.createElement("script");
+    script.src = "https://tally.so/widgets/embed.js";
+    script.onload = () => {
+      if (window.Tally) {
+        window.Tally.loadEmbeds();
+      }
+    };
+    document.head.appendChild(script);
+  }, []);
+
   return (
     <div className="flex min-h-[100dvh] flex-col">
       {/* Fixed/Sticky Header with Logo */}
@@ -36,18 +49,19 @@ export default function SurveyPage() {
 
           {/* Tally Form Container */}
           <div className="w-full bg-card rounded-lg border p-8 min-h-[600px] flex items-center justify-center">
-            <div className="text-center space-y-4">
-              <div className="text-muted-foreground text-lg">
-                {/* Insert Tally integration code here */}
-                <div className="bg-muted/50 rounded-lg p-8 border-2 border-dashed border-muted-foreground/20">
-                  <p className="text-sm text-muted-foreground mb-2">Tally Form Integration</p>
-                  <p className="text-xs text-muted-foreground/60">
-                    Replace this placeholder with your Tally.io embed code
-                  </p>
-                  <div className="mt-4 text-xs text-muted-foreground/40 font-mono">
-                    {`<!-- Insert Tally integration code here -->`}
-                  </div>
-                </div>
+            <div className="text-center space-y-4 text-muted-foreground text-lg">
+              <div className="bg-muted/50 rounded-lg p-8 border-2 border-dashed border-muted-foreground/20">
+                <p className="text-sm text-muted-foreground mb-2">Tally Form Integration</p>
+                <iframe
+                  data-tally-src="https://tally.so/embed/mZKpjv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                  loading="lazy"
+                  width="100%"
+                  height="400"
+                  frameBorder="0"
+                  marginHeight={0}
+                  marginWidth={0}
+                  title="SlickTunnel LandingPage Feedback"
+                ></iframe>
               </div>
             </div>
           </div>

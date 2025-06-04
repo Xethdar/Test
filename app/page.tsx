@@ -305,7 +305,7 @@ export default function LandingPage() {
                             }}
                             className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary"
                           >
-                            Join waitlist again
+                            Add a new Email
                           </Button>
                         </div>
                       )}
