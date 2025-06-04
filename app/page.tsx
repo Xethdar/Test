@@ -322,15 +322,17 @@ export default function LandingPage() {
             <span className="text-xl font-bold">SlickTunnel</span>
           </div>
           <nav className="flex gap-4 sm:gap-6">
-            <Link href="#" className="text-sm font-medium hover:underline">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-sm font-medium hover:underline">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-sm font-medium hover:underline">
-              Contact
-            </Link>
+            <button onClick={() => scrollToSection("features")} className="text-sm font-medium hover:text-primary">
+              Features
+            </button>
+
+            <button onClick={() => scrollToSection("how-it-works")} className="text-sm font-medium hover:text-primary">
+              How It Works
+            </button>
+
+            <button onClick={() => scrollToSection("faq")} className="text-sm font-medium hover:text-primary">
+              FAQ
+            </button>
           </nav>
           <div className="flex items-center">
             <p className="text-sm text-muted-foreground">
