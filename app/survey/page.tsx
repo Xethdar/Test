@@ -64,7 +64,7 @@ export default function SurveyPage() {
                 height: "100px",
                 width: "1px",
                 position: "fixed",
-                marginTop: "4.5rem"
+                marginTop: "4.4rem"
               }} />
             </motion.div>
 
@@ -97,9 +97,10 @@ export default function SurveyPage() {
             >
               <div style={{
                 backgroundColor: "#00ff7f",
-                height: "500px",
+                height: "100px",
                 width: "1px",
                 position: "fixed"
+                marginTop: "4.4rem"
               }} />
             </motion.div>
           </div>
