@@ -70,7 +70,7 @@ export default function SurveyPage() {
 
             {/* Center Form */}
             <iframe
-              data-tally-src="https://tally.so/embed/mZKpjv?alignLeft=1&hideTitle=1&dynamicHeight=1"
+              data-tally-src="https://tally.so/embed/mZKpjv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
               loading="lazy"
               width="100%"
               height="fit-content"
