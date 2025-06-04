@@ -51,7 +51,7 @@ export default function SurveyPage() {
           {/* Tally Form Container */}
           <div className="flex justify-center px-4 py-0">
             <iframe
-              data-tally-src="https://tally.so/embed/3X1x8j?hideTitle=1&transparentBackground=1&dynamicHeight=1"
+              data-tally-src="https://tally.so/embed/mZKpjv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
               width="100%"
               height="fit-content"
               frameBorder="0"
