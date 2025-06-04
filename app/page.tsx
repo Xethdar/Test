@@ -239,7 +239,8 @@ export default function LandingPage() {
                   </div>
                   <h3 className="text-xl font-bold">Invest & Track</h3>
                   <p className="text-muted-foreground">
-                    We’ll guide you through the process to buy your desired bonds, giving step by step instructions throughout the journey. Monitor your portfolio performance with our intuitive dashboard.
+                    We'll guide you through the process to buy your desired bonds, giving step by step instructions
+                    throughout the journey. Monitor your portfolio performance with our intuitive dashboard.
                   </p>
                 </div>
               </div>
@@ -253,7 +254,8 @@ export default function LandingPage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Join Our Waitlist</h2>
                 <p className="mx-auto max-w-[700px] md:text-xl/relaxed opacity-90">
-                  Be among the first to access our platform when we launch. Early members will have a say in how our platform develops
+                  Be among the first to access our platform when we launch. Early members will have a say in how our
+                  platform develops
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
@@ -261,7 +263,7 @@ export default function LandingPage() {
                   <div className="flex flex-col items-center justify-center space-y-6 py-0">
                     <div
                       className={`transition-all duration-1000 ${animateCheckmark ? "scale-100 opacity-100" : "scale-0 opacity-0"}`}
-                      style={{ display: 'flex' }}
+                      style={{ display: "flex" }}
                     >
                       <CheckCircle className="h-24 w-24 text-green-300" />
                     </div>
@@ -269,6 +271,11 @@ export default function LandingPage() {
                     <p className="text-lg opacity-90">
                       We'll keep you updated on our launch and exclusive early access opportunities.
                     </p>
+                    <div className="pt-4">
+                      <Button asChild variant="secondary" size="lg">
+                        <Link href="/survey">Help Us Build Better Features</Link>
+                      </Button>
+                    </div>
                   </div>
                 ) : (
                   <form action={formAction} className="flex flex-col gap-2 sm:flex-row">
@@ -364,8 +371,7 @@ const faqItems = [
   },
   {
     question: "When will SlickTunnel officially launch?",
-    answer:
-      "Very Soon. We'll email you. ",
+    answer: "Very Soon. We'll email you. ",
   },
   {
     question: "What fees does SlickTunnel charge?",
