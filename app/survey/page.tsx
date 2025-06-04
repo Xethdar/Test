@@ -84,7 +84,7 @@ export default function SurveyPage() {
                 scrollBehavior: "smooth",
                 pointerEvents: "auto",
                 maxWidth: "750px",
-                borderRadius: "5px"
+                borderRadius: "15px"
               }}
               onMouseEnter={() => setisVisible(true)}
               onMouseLeave={() => setisVisible(false)}
