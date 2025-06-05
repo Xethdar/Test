@@ -7,8 +7,18 @@ import { useState, useEffect } from "react"
 import * as motion from "motion/react-client";
 import { AnimatePresence } from "motion/react";
 
+const generateToken = () => {
+  return "st_" + Math.random().toString(36).substr(2, 9) + Date.now().toString(36)
+}
+
 export default function SurveyPage() {
   const [isVisible, setisVisible] = useState(false)
+
+  const handleToken = () => {
+    const token = generateToken()
+    localStorage.setItem("slicktunnel_token", token)
+    setHasToken(true)
+  }
 
   useEffect(() => {
     // Load Tally embed script once on mount
@@ -31,6 +41,9 @@ export default function SurveyPage() {
             <TrendingUp className="h-6 w-6 text-primary" />
             <span className="text-xl font-bold">SlickTunnel</span>
           </Link>
+          <Button variant="outline" asChild onClick={handleToken}>
+            Refresh Token
+          </Button>
           <Button variant="outline" asChild>
             <Link href="/" className="flex items-center gap-2">
               <ArrowLeft className="h-4 w-4" />
