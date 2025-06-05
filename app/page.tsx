@@ -381,7 +381,7 @@ export default function LandingPage() {
       {/* Member 1 */}
       <div className="group relative flex flex-col items-center">
         <img
-          src="https://via.placeholder.com/150"
+          src="/MacauleySlicktunnelPic.png"
           alt="Team Member 1"
           className="rounded-full w-40 h-40 object-cover border-4 border-green-400 transition-transform duration-300 group-hover:scale-105"
         />
