@@ -340,41 +340,38 @@ export default function LandingPage() {
         </section>
 
         <section id="about-us" className="w-full py-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
-          <section className="w-full py-16 bg-black text-white">
-  <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
-    
-    {/* Left: Mission Statement */}
-    <div>
-      <h3 className="text-sm text-green-400 font-semibold uppercase mb-2">Our mission</h3>
-      <h2 className="text-4xl md:text-5xl font-bold text-green-300 leading-tight">
-        Unite everyday people to unlock their financial progress.
-      </h2>
-    </div>
+          <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
 
-    {/* Right: About Content */}
-    <div className="space-y-6 text-sm md:text-base text-gray-300">
-      <div>
-        <h4 className="text-green-400 font-semibold text-sm uppercase mb-2">About us</h4>
-        <p>
-          SlickTunnel is a technology-first feedback platform built to help teams improve with speed and clarity. 
-          We believe every user’s voice matters — and should be heard without friction.
-        </p>
-      </div>
+          {/* Left: Mission Statement */}
+          <div>
+            <h3 className="text-sm text-green-400 font-semibold uppercase mb-2">Our mission</h3>
+            <h2 className="text-4xl md:text-5xl font-bold text-green-300 leading-tight">
+              Unite everyday people to unlock their financial progress.
+            </h2>
+          </div>
 
-      <p>
-        We don’t profit from gatekeeping feedback or analytics. That’s why SlickTunnel is free during Alpha, 
-        and always puts user experience first. No clutter. No noise. Just honest insight, delivered fast.
-      </p>
+          {/* Right: About Content */}
+          <div className="space-y-6 text-sm md:text-base text-gray-300">
+            <div>
+              <h4 className="text-green-400 font-semibold text-sm uppercase mb-2">About us</h4>
+              <p>
+                SlickTunnel is a technology-first feedback platform built to help teams improve with speed and clarity. 
+                We believe every user’s voice matters — and should be heard without friction.
+              </p>
+            </div>
 
-      <p>
-        We’re building a platform that empowers teams to collect, analyze, and act on feedback — whether it’s 
-        product testing, idea validation, or continuous improvement. Our tools are designed with privacy and 
-        accessibility at the core.
-      </p>
-    </div>
+            <p>
+              We don’t profit from gatekeeping feedback or analytics. That’s why SlickTunnel is free during Alpha, 
+              and always puts user experience first. No clutter. No noise. Just honest insight, delivered fast.
+            </p>
 
-  </div>
-</section>
+            <p>
+              We’re building a platform that empowers teams to collect, analyze, and act on feedback — whether it’s 
+              product testing, idea validation, or continuous improvement. Our tools are designed with privacy and 
+              accessibility at the core.
+            </p>
+          </div>
+          </div>
         </section>
 
         <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
