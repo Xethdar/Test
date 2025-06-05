@@ -385,7 +385,7 @@ export default function LandingPage() {
     <div
       onMouseEnter={() => setFocus("founder1")}
       onMouseLeave={() => setFocus(null)}
-      className="relative w-[200px] h-[300px] overflow-hidden border-4 border-green-400 rounded-md z-10"
+      className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
     >
       <img
         src="https://via.placeholder.com/200x300"
@@ -440,7 +440,7 @@ export default function LandingPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: focus === "founder2" ? 1 : 0 }}
           transition={{ duration: 0.4 }}
-          className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
+          className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
         >
           <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
           <p>
