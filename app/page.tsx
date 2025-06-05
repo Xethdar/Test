@@ -359,23 +359,54 @@ export default function LandingPage() {
             <div>
               <h4 className="text-green-400 font-semibold text-sm uppercase mb-2">About us</h4>
               <p>
-                SlickTunnel is a technology-first feedback platform built to help teams improve with speed and clarity. 
-                We believe every user’s voice matters — and should be heard without friction.
+                SlickTunnel is a guidance platform built to democratize access to fixed-income investing. 
               </p>
             </div>
 
             <p>
-              We don’t profit from gatekeeping feedback or analytics. That’s why SlickTunnel is free during Alpha, 
-              and always puts user experience first. No clutter. No noise. Just honest insight, delivered fast.
+              We empower young professionals, students, and forward-thinking investors to discover and explore high-yield opportunities—without giving up equity. By curating startup and institutional bond data in one sleek, easy-to-use interface, SlickTunnel is redefining how a new generation builds wealth with confidence and control.
             </p>
 
             <p>
-              We’re building a platform that empowers teams to collect, analyze, and act on feedback — whether it’s 
-              product testing, idea validation, or continuous improvement. Our tools are designed with privacy and 
-              accessibility at the core.
+              Bonds offer everyday people a smarter, more stable way to grow their money—without the wild swings of the stock market. Whether you're saving for a goal or just want reliable passive income, bonds provide predictable returns, lower risk, and often pay interest regularly. They let you invest in real companies, governments, or even startups, while helping diversify your portfolio. In a world that glorifies high-risk bets, bonds are the underrated backbone of long-term financial security.
             </p>
           </div>
           </div>
+          <section className="w-full py-16 bg-black text-white">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold text-green-300 mb-12">Our Team</h2>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 justify-items-center">
+      
+      {/* Member 1 */}
+      <div className="group relative flex flex-col items-center">
+        <img
+          src="https://via.placeholder.com/150"
+          alt="Team Member 1"
+          className="rounded-full w-40 h-40 object-cover border-4 border-green-400 transition-transform duration-300 group-hover:scale-105"
+        />
+        <h4 className="mt-4 text-lg font-semibold text-green-200">Founder 1</h4>
+        <div className="absolute bottom-[-120px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-full text-sm text-gray-300 p-4 bg-zinc-900 rounded shadow-lg z-10">
+          Vision-driven creator of SlickTunnel. Passionate about fast feedback loops, clean UX, and solving user pain points.
+        </div>
+      </div>
+
+      {/* Member 2 */}
+      <div className="group relative flex flex-col items-center">
+        <img
+          src="https://via.placeholder.com/150"
+          alt="Team Member 2"
+          className="rounded-full w-40 h-40 object-cover border-4 border-green-400 transition-transform duration-300 group-hover:scale-105"
+        />
+        <h4 className="mt-4 text-lg font-semibold text-green-200">Founder 2</h4>
+        <div className="absolute bottom-[-120px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-full text-sm text-gray-300 p-4 bg-zinc-900 rounded shadow-lg z-10">
+          Co-founder & systems architect. Focused on infrastructure, security, and scalable feedback analytics.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
         </section>
 
         <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
