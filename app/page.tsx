@@ -376,55 +376,61 @@ export default function LandingPage() {
             </p>
           </div>
           </div>
-          <section className="w-full py-16 bg-black text-white">
+          <section className="w-full py-16 bg-black text-white overflow-hidden">
   <h2 className="text-3xl md:text-4xl font-bold text-green-300 mb-12 text-center">Our Team</h2>
 
-  <div className="flex flex-col sm:flex-row gap-10 justify-center items-center">
+  <div className="flex flex-col sm:flex-row gap-10 justify-center items-start relative">
+
     {/* Founder 1 */}
     <div
       onMouseEnter={() => setFocus("founder1")}
       onMouseLeave={() => setFocus(null)}
-      className="relative w-[200px] h-[300px] overflow-hidden border-4 border-green-400 rounded-md"
+      className="relative w-[200px] h-[300px] overflow-hidden border-4 border-green-400 rounded-md z-10"
     >
       <img
         src="https://via.placeholder.com/200x300"
         alt="Founder 1"
         className="w-full h-full object-cover"
       />
-      <motion.div
-        initial={{ x: "100%" }}
-        animate={{ x: focus === "founder1" ? "0%" : "100%" }}
-        transition={{ type: "tween", duration: 0.4 }}
-        className="absolute top-0 right-0 w-full h-full bg-zinc-900 px-4 py-6 text-left text-sm text-white z-10"
-      >
-        <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
-        <p>Vision-driven creator of SlickTunnel. Focused on UX, feedback, and simplicity.</p>
-      </motion.div>
     </div>
 
+    {/* Sliding text panel for Founder 1 */}
+    <motion.div
+      initial={{ x: 0 }}
+      animate={{ x: focus === "founder1" ? 220 : 0 }}
+      transition={{ type: "tween", duration: 0.4 }}
+      className="absolute top-[calc(50%+1rem)] sm:top-1/2 left-[calc(50%-120px)] sm:left-[calc(50%-330px)] transform -translate-y-1/2 z-0"
+    >
+      <motion.div
+        initial={{ x: "-100%", opacity: 0 }}
+        animate={{ x: focus === "founder1" ? 0 : "-100%", opacity: focus === "founder1" ? 1 : 0 }}
+        transition={{ type: "tween", duration: 0.4 }}
+        className="w-[300px] h-[300px] bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
+      >
+        <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
+        <p>
+          Vision-driven creator of SlickTunnel. Passionate about user experience, fast feedback loops,
+          and elegant UI engineering.
+        </p>
+      </motion.div>
+    </motion.div>
+
     {/* Founder 2 */}
-    <div
-      onMouseEnter={() => setFocus("founder2")}
-      onMouseLeave={() => setFocus(null)}
-      className="relative w-[200px] h-[300px] overflow-hidden border-4 border-green-400 rounded-md"
+    <motion.div
+      animate={{ x: focus === "founder1" ? 320 : 0 }}
+      transition={{ type: "tween", duration: 0.4 }}
+      className="relative w-[200px] h-[300px] overflow-hidden border-4 border-green-400 rounded-md z-10"
     >
       <img
         src="https://via.placeholder.com/200x300"
         alt="Founder 2"
         className="w-full h-full object-cover"
       />
-      <motion.div
-        initial={{ x: "100%" }}
-        animate={{ x: focus === "founder2" ? "0%" : "100%" }}
-        transition={{ type: "tween", duration: 0.4 }}
-        className="absolute top-0 right-0 w-full h-full bg-zinc-900 px-4 py-6 text-left text-sm text-white z-10"
-      >
-        <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
-        <p>Backend & infra wizard. Designs scalable systems and smooth product pipelines.</p>
-      </motion.div>
-    </div>
+      {/* No details box for founder 2 here */}
+    </motion.div>
   </div>
 </section>
+
         </section>
 
         <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
