@@ -377,11 +377,11 @@ export default function LandingPage() {
           </div>
           </div>
           <section className="w-full py-16 bg-black text-white overflow-hidden">
-  <h2 className="text-3xl md:text-4xl font-bold text-green-300 mb-12 text-left pl-20">
+  <h2 className="text-3xl md:text-4xl font-bold text-green-300 mb-12 text-center">
     Our Team
   </h2>
 
-  <div className="flex gap-10 justify-start items-start relative pl-20">
+  <div className="flex gap-10 justify-start items-start relative pl-60">
 
     {/* Founder 1 */}
     <div
