@@ -376,83 +376,62 @@ export default function LandingPage() {
             </p>
           </div>
           </div>
-          <section className="w-full py-16 bg-black text-white overflow-hidden">
-  <h2 className="text-3xl md:text-4xl font-bold text-green-300 mb-12 text-left pl-12">
-    Our Team
-  </h2>
-
-  <div className="flex gap-10 justify-start items-start relative pl-12">
-
+          <div
+  className="flex items-center justify-start min-h-screen px-12"
+  style={{ backgroundColor: "#000", color: "#00ff7f" }}
+>
+  <div className="flex gap-12 items-center">
     {/* Founder 1 */}
     <div
+      className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
       onMouseEnter={() => setFocus("founder1")}
       onMouseLeave={() => setFocus(null)}
-      className="relative w-[200px] h-[300px] overflow-hidden border-4 border-green-400 rounded-md z-10"
     >
       <img
         src="https://via.placeholder.com/200x300"
         alt="Founder 1"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover rounded-md"
       />
-
-      {/* Text Sliding Out of Image */}
       <motion.div
         initial={{ x: 0 }}
-        animate={{ x: focus === "founder1" ? 210 : 0 }}
-        transition={{ type: "tween", duration: 0.4 }}
-        className="absolute top-0 left-0 h-full"
+        animate={{ x: focus === "founder1" ? 220 : 0 }}
+        transition={{ type: "tween", duration: 0.3 }}
+        className="absolute top-0 left-full h-full w-[220px] bg-green-900 text-white p-4 shadow-lg"
       >
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: focus === "founder1" ? 1 : 0 }}
-          transition={{ duration: 0.4 }}
-          className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
-        >
-          <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
-          <p>
-            Vision-driven creator of SlickTunnel. Passionate about user experience, fast feedback loops,
-            and elegant UI engineering.
-          </p>
-        </motion.div>
+        <h3 className="text-lg font-bold mb-2">Details</h3>
+        <p className="text-sm">
+          Founder 1 is the creative lead of SlickTunnel. They manage the vision and core product decisions.
+        </p>
       </motion.div>
     </div>
 
     {/* Founder 2 */}
     <motion.div
+      animate={{ x: focus === "founder1" ? 220 : 0 }}
+      transition={{ type: "tween", duration: 0.3 }}
+      className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
       onMouseEnter={() => setFocus("founder2")}
       onMouseLeave={() => setFocus(null)}
-      animate={{ x: focus === "founder1" ? 320 : 0 }}
-      transition={{ type: "tween", duration: 0.4 }}
-      className="relative w-[200px] h-[300px] overflow-hidden border-4 border-green-400 rounded-md z-10"
     >
       <img
         src="https://via.placeholder.com/200x300"
         alt="Founder 2"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover rounded-md"
       />
-
-      {/* Text from Founder 2 */}
       <motion.div
         initial={{ x: 0 }}
-        animate={{ x: focus === "founder2" ? 210 : 0 }}
-        transition={{ type: "tween", duration: 0.4 }}
-        className="absolute top-0 left-0 h-full"
+        animate={{ x: focus === "founder2" ? 220 : 0 }}
+        transition={{ type: "tween", duration: 0.3 }}
+        className="absolute top-0 left-full h-full w-[220px] bg-green-900 text-white p-4 shadow-lg"
       >
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: focus === "founder2" ? 1 : 0 }}
-          transition={{ duration: 0.4 }}
-          className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
-        >
-          <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
-          <p>
-            Co-founder of SlickTunnel. Specializes in backend, ops, and making everything magically work under pressure.
-          </p>
-        </motion.div>
+        <h3 className="text-lg font-bold mb-2">Details</h3>
+        <p className="text-sm">
+          Founder 2 is the technical architect of SlickTunnel. They handle systems, infrastructure, and engineering.
+        </p>
       </motion.div>
     </motion.div>
   </div>
-</section>
+</div>
         </section>
 
         <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
