@@ -23,6 +23,7 @@ export default function SurveyPage() {
   useEffect(() => {
     // Load Tally embed script once on mount
     const script = document.createElement("script");
+    generateToken()
     script.src = "https://tally.so/widgets/embed.js";
     script.onload = () => {
       if (window.Tally) {
