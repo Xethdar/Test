@@ -41,7 +41,7 @@ export default function SurveyPage() {
             <TrendingUp className="h-6 w-6 text-primary" />
             <span className="text-xl font-bold">SlickTunnel</span>
           </Link>
-          <Button variant="outline" asChild onClick={handleToken} style={{marginRight: "10rem"}}">
+          <Button variant="outline" asChild onClick={handleToken} style={{marginRight: "10rem"}}>
             Refresh Token
           </Button>
           <Button variant="outline" asChild>
