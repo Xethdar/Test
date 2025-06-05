@@ -7,6 +7,9 @@ import { BarChart3, Shield, TrendingUp, ChevronDown, CheckCircle } from "lucide-
 import { useActionState } from "react"
 import { addToWaitlist } from "./actions"
 
+import * as motion from "motion/react-client";
+import { AnimatePresence } from "motion/react";
+
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { toast } from "@/hooks/use-toast"
