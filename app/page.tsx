@@ -97,7 +97,7 @@ export default function LandingPage() {
               FAQ
             </button>
 
-            <button onClick={() => ScrollToSection("about-us")} className="text-sm font-medium hover:text-primary">
+            <button onClick={() => scrollToSection("about-us")} className="text-sm font-medium hover:text-primary">
               About Us
             </button>
           </nav>
