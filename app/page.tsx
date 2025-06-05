@@ -39,6 +39,7 @@ export default function LandingPage() {
   const [showThankYou, setShowThankYou] = useState(false)
   const [animateCheckmark, setAnimateCheckmark] = useState(false)
   const [hasToken, setHasToken] = useState(false)
+  const [focus, setFocus] = useState<null | "founder1" | "founder2">(null)
 
   // Check for existing token on component mount
   useEffect(() => {
@@ -376,63 +377,51 @@ export default function LandingPage() {
           </div>
           </div>
           <section className="w-full py-16 bg-black text-white">
-  <div className="max-w-6xl mx-auto px-6 text-center">
-    <h2 className="text-3xl md:text-4xl font-bold text-green-300 mb-12">Our Team</h2>
+  <h2 className="text-3xl md:text-4xl font-bold text-green-300 mb-12 text-center">Our Team</h2>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 justify-items-center">
-
-      {/* Member 1 */}
+  <div className="flex flex-col sm:flex-row gap-10 justify-center items-center">
+    {/* Founder 1 */}
+    <div
+      onMouseEnter={() => setFocus("founder1")}
+      onMouseLeave={() => setFocus(null)}
+      className="relative w-[200px] h-[300px] overflow-hidden border-4 border-green-400 rounded-md"
+    >
+      <img
+        src="https://via.placeholder.com/200x300"
+        alt="Founder 1"
+        className="w-full h-full object-cover"
+      />
       <motion.div
-        className="relative w-[200px] h-[300px] overflow-hidden border-4 border-green-400"
-        whileHover="hover"
+        initial={{ x: "100%" }}
+        animate={{ x: focus === "founder1" ? "0%" : "100%" }}
+        transition={{ type: "tween", duration: 0.4 }}
+        className="absolute top-0 right-0 w-full h-full bg-zinc-900 px-4 py-6 text-left text-sm text-white z-10"
       >
-        <img
-          src="https://via.placeholder.com/200x300"
-          alt="Team Member 1"
-          className="w-full h-full object-cover"
-        />
-        <motion.div
-          variants={{
-            hover: { x: 0 },
-            initial: { x: "100%" },
-          }}
-          initial="initial"
-          transition={{ type: "tween", duration: 0.4 }}
-          className="absolute top-0 right-0 w-full h-full bg-zinc-900 text-left px-4 py-6 text-sm text-gray-200 z-10 flex flex-col"
-        >
-          <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
-          <p>
-            Vision-driven creator of SlickTunnel. Passionate about feedback, clean UX, and making hard things feel easy.
-          </p>
-        </motion.div>
+        <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
+        <p>Vision-driven creator of SlickTunnel. Focused on UX, feedback, and simplicity.</p>
       </motion.div>
+    </div>
 
-      {/* Member 2 */}
+    {/* Founder 2 */}
+    <div
+      onMouseEnter={() => setFocus("founder2")}
+      onMouseLeave={() => setFocus(null)}
+      className="relative w-[200px] h-[300px] overflow-hidden border-4 border-green-400 rounded-md"
+    >
+      <img
+        src="https://via.placeholder.com/200x300"
+        alt="Founder 2"
+        className="w-full h-full object-cover"
+      />
       <motion.div
-        className="relative w-[200px] h-[300px] overflow-hidden border-4 border-green-400"
-        whileHover="hover"
+        initial={{ x: "100%" }}
+        animate={{ x: focus === "founder2" ? "0%" : "100%" }}
+        transition={{ type: "tween", duration: 0.4 }}
+        className="absolute top-0 right-0 w-full h-full bg-zinc-900 px-4 py-6 text-left text-sm text-white z-10"
       >
-        <img
-          src="https://via.placeholder.com/200x300"
-          alt="Team Member 2"
-          className="w-full h-full object-cover"
-        />
-        <motion.div
-          variants={{
-            hover: { x: 0 },
-            initial: { x: "100%" },
-          }}
-          initial="initial"
-          transition={{ type: "tween", duration: 0.4 }}
-          className="absolute top-0 right-0 w-full h-full bg-zinc-900 text-left px-4 py-6 text-sm text-gray-200 z-10 flex flex-col"
-        >
-          <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
-          <p>
-            Co-founder & systems architect. Focused on scale, infrastructure, and delivering seamless product experiences.
-          </p>
-        </motion.div>
+        <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
+        <p>Backend & infra wizard. Designs scalable systems and smooth product pipelines.</p>
       </motion.div>
-
     </div>
   </div>
 </section>
