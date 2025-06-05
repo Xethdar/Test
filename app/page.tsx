@@ -289,7 +289,6 @@ export default function LandingPage() {
                       </div>
                     )}
                     <h3 className="text-2xl font-bold">{showThankYou ? "Thank you for joining!" : "Welcome back!"}</h3>
-                    <p className="text-lg opacity-90">Help in the development of our site here</p>
                     <div className="pt-4 space-y-3">
                       <Button asChild variant="secondary" size="lg">
                         <Link href="/survey">Share your ideas and opinions</Link>
