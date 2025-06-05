@@ -350,7 +350,7 @@ export default function LandingPage() {
           <div>
             <h3 className="text-sm text-green-400 font-semibold uppercase mb-2">Our mission</h3>
             <h2 className="text-4xl md:text-5xl font-bold text-green-300 leading-tight">
-              Unite everyday people to unlock their financial progress.
+              Our Mission - Liberate the Bond Market
             </h2>
           </div>
 
