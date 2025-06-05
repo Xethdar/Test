@@ -380,17 +380,23 @@ export default function LandingPage() {
     <h2 className="text-3xl md:text-4xl font-bold text-green-300 mb-12">Our Team</h2>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 justify-items-center">
-      
+
       {/* Member 1 */}
-      <div className="relative group w-[200px] h-[300px] overflow-hidden">
+      <motion.div
+        className="relative w-[200px] h-[300px] overflow-hidden border-4 border-green-400"
+        whileHover="hover"
+      >
         <img
           src="https://via.placeholder.com/200x300"
           alt="Team Member 1"
-          className="w-full h-full object-cover border-4 border-green-400"
+          className="w-full h-full object-cover"
         />
         <motion.div
-          initial={{ x: "100%" }}
-          whileHover={{ x: 0 }}
+          variants={{
+            hover: { x: 0 },
+            initial: { x: "100%" },
+          }}
+          initial="initial"
           transition={{ type: "tween", duration: 0.4 }}
           className="absolute top-0 right-0 w-full h-full bg-zinc-900 text-left px-4 py-6 text-sm text-gray-200 z-10 flex flex-col"
         >
@@ -399,18 +405,24 @@ export default function LandingPage() {
             Vision-driven creator of SlickTunnel. Passionate about feedback, clean UX, and making hard things feel easy.
           </p>
         </motion.div>
-      </div>
+      </motion.div>
 
       {/* Member 2 */}
-      <div className="relative group w-[200px] h-[300px] overflow-hidden">
+      <motion.div
+        className="relative w-[200px] h-[300px] overflow-hidden border-4 border-green-400"
+        whileHover="hover"
+      >
         <img
           src="https://via.placeholder.com/200x300"
           alt="Team Member 2"
-          className="w-full h-full object-cover border-4 border-green-400"
+          className="w-full h-full object-cover"
         />
         <motion.div
-          initial={{ x: "100%" }}
-          whileHover={{ x: 0 }}
+          variants={{
+            hover: { x: 0 },
+            initial: { x: "100%" },
+          }}
+          initial="initial"
           transition={{ type: "tween", duration: 0.4 }}
           className="absolute top-0 right-0 w-full h-full bg-zinc-900 text-left px-4 py-6 text-sm text-gray-200 z-10 flex flex-col"
         >
@@ -419,7 +431,7 @@ export default function LandingPage() {
             Co-founder & systems architect. Focused on scale, infrastructure, and delivering seamless product experiences.
           </p>
         </motion.div>
-      </div>
+      </motion.div>
 
     </div>
   </div>
