@@ -379,7 +379,7 @@ export default function LandingPage() {
           <section className="w-full py-16 bg-black text-white overflow-hidden">
   <h2 className="text-3xl md:text-4xl font-bold text-green-300 mb-12 text-center">Our Team</h2>
 
-  <div className="flex flex-col sm:flex-row gap-10 justify-center items-start relative">
+  <div className="flex gap-10 justify-center items-start relative">
 
     {/* Founder 1 */}
     <div
@@ -392,31 +392,33 @@ export default function LandingPage() {
         alt="Founder 1"
         className="w-full h-full object-cover"
       />
-    </div>
 
-    {/* Sliding text panel for Founder 1 */}
-    <motion.div
-      initial={{ x: 0 }}
-      animate={{ x: focus === "founder1" ? 220 : 0 }}
-      transition={{ type: "tween", duration: 0.4 }}
-      className="absolute top-[calc(50%+1rem)] sm:top-1/2 left-[calc(50%-120px)] sm:left-[calc(50%-330px)] transform -translate-y-1/2 z-0"
-    >
+      {/* Text Sliding Out of Image */}
       <motion.div
-        initial={{ x: "-100%", opacity: 0 }}
-        animate={{ x: focus === "founder1" ? 0 : "-100%", opacity: focus === "founder1" ? 1 : 0 }}
+        initial={{ x: 0 }}
+        animate={{ x: focus === "founder1" ? 210 : 0 }}
         transition={{ type: "tween", duration: 0.4 }}
-        className="w-[300px] h-[300px] bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
+        className="absolute top-0 left-0 h-full"
       >
-        <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
-        <p>
-          Vision-driven creator of SlickTunnel. Passionate about user experience, fast feedback loops,
-          and elegant UI engineering.
-        </p>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: focus === "founder1" ? 1 : 0 }}
+          transition={{ duration: 0.4 }}
+          className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
+        >
+          <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
+          <p>
+            Vision-driven creator of SlickTunnel. Passionate about user experience, fast feedback loops,
+            and elegant UI engineering.
+          </p>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
 
     {/* Founder 2 */}
     <motion.div
+      onMouseEnter={() => setFocus("founder2")}
+      onMouseLeave={() => setFocus(null)}
       animate={{ x: focus === "founder1" ? 320 : 0 }}
       transition={{ type: "tween", duration: 0.4 }}
       className="relative w-[200px] h-[300px] overflow-hidden border-4 border-green-400 rounded-md z-10"
@@ -426,7 +428,26 @@ export default function LandingPage() {
         alt="Founder 2"
         className="w-full h-full object-cover"
       />
-      {/* No details box for founder 2 here */}
+
+      {/* Text from Founder 2 */}
+      <motion.div
+        initial={{ x: 0 }}
+        animate={{ x: focus === "founder2" ? 210 : 0 }}
+        transition={{ type: "tween", duration: 0.4 }}
+        className="absolute top-0 left-0 h-full"
+      >
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: focus === "founder2" ? 1 : 0 }}
+          transition={{ duration: 0.4 }}
+          className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
+        >
+          <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
+          <p>
+            Co-founder of SlickTunnel. Specializes in backend, ops, and making everything magically work under pressure.
+          </p>
+        </motion.div>
+      </motion.div>
     </motion.div>
   </div>
 </section>
