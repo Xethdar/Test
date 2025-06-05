@@ -290,7 +290,7 @@ export default function LandingPage() {
                     )}
                     <h3 className="text-2xl font-bold">{showThankYou ? "Thank you for joining!" : "Welcome back!"}</h3>
                     <div className="pt-4 space-y-3">
-                      <Button asChild variant="secondary" size="lg">
+                      <Button asChild variant="outline" size="lg">
                         <Link href="/survey" className="text-sm font-medium hover:text-primary" style={{marginTop: "0rem", border: "white solid 1px"}}>Share your ideas and opinions</Link>
                       </Button>
                       {hasToken && !showThankYou && (
