@@ -385,7 +385,7 @@ export default function LandingPage() {
           alt="Team Member 1"
           className="rounded-full w-40 h-40 object-cover border-4 border-green-400 transition-transform duration-300 group-hover:scale-105"
         />
-        <h4 className="mt-4 text-lg font-semibold text-green-200">Founder 1</h4>
+        <h4 className="mt-4 text-lg font-semibold text-green-200">Macauley Barnhardt</h4>
         <div className="absolute bottom-[-120px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-full text-sm text-gray-300 p-4 bg-zinc-900 rounded shadow-lg z-10">
           Vision-driven creator of SlickTunnel. Passionate about fast feedback loops, clean UX, and solving user pain points.
         </div>
@@ -398,7 +398,7 @@ export default function LandingPage() {
           alt="Team Member 2"
           className="rounded-full w-40 h-40 object-cover border-4 border-green-400 transition-transform duration-300 group-hover:scale-105"
         />
-        <h4 className="mt-4 text-lg font-semibold text-green-200">Founder 2</h4>
+        <h4 className="mt-4 text-lg font-semibold text-green-200">Prem Jain</h4>
         <div className="absolute bottom-[-120px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-full text-sm text-gray-300 p-4 bg-zinc-900 rounded shadow-lg z-10">
           Co-founder & systems architect. Focused on infrastructure, security, and scalable feedback analytics.
         </div>
