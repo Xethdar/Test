@@ -350,7 +350,7 @@ export default function LandingPage() {
           <div>
             <h3 className="text-sm text-green-400 font-semibold uppercase mb-2">Our mission</h3>
             <h2 className="text-4xl md:text-5xl font-bold text-green-300 leading-tight">
-              Our Mission - Liberate the Bond Market and Bringing Bonds back to the people
+              Liberate the Bond Market & Bringing Bonds back to the people
             </h2>
           </div>
 
@@ -379,29 +379,43 @@ export default function LandingPage() {
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 justify-items-center">
       
       {/* Member 1 */}
-      <div className="group relative flex flex-col items-center">
+      <div className="relative group w-[200px] h-[300px] overflow-hidden">
         <img
-          src="/MacauleySlicktunnelPic.png"
+          src="https://via.placeholder.com/200x300"
           alt="Team Member 1"
-          className="rounded-full w-40 h-40 object-cover border-4 border-green-400 transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-full object-cover border-4 border-green-400"
         />
-        <h4 className="mt-4 text-lg font-semibold text-green-200">Macauley Barnhardt</h4>
-        <div className="absolute bottom-[-120px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-full text-sm text-gray-300 p-4 bg-zinc-900 rounded shadow-lg z-10">
-          Vision-driven creator of SlickTunnel. Passionate about fast feedback loops, clean UX, and solving user pain points.
-        </div>
+        <motion.div
+          initial={{ x: "100%" }}
+          whileHover={{ x: 0 }}
+          transition={{ type: "tween", duration: 0.4 }}
+          className="absolute top-0 right-0 w-full h-full bg-zinc-900 text-left px-4 py-6 text-sm text-gray-200 z-10 flex flex-col"
+        >
+          <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
+          <p>
+            Vision-driven creator of SlickTunnel. Passionate about feedback, clean UX, and making hard things feel easy.
+          </p>
+        </motion.div>
       </div>
 
       {/* Member 2 */}
-      <div className="group relative flex flex-col items-center">
+      <div className="relative group w-[200px] h-[300px] overflow-hidden">
         <img
-          src="/PremSlicktunnelPic.png"
+          src="https://via.placeholder.com/200x300"
           alt="Team Member 2"
-          className="rounded-full w-40 h-40 object-cover border-4 border-green-400 transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-full object-cover border-4 border-green-400"
         />
-        <h4 className="mt-4 text-lg font-semibold text-green-200">Prem Jain</h4>
-        <div className="absolute bottom-[-120px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-full text-sm text-gray-300 p-4 bg-zinc-900 rounded shadow-lg z-10">
-          Co-founder & systems architect. Focused on infrastructure, security, and scalable feedback analytics.
-        </div>
+        <motion.div
+          initial={{ x: "100%" }}
+          whileHover={{ x: 0 }}
+          transition={{ type: "tween", duration: 0.4 }}
+          className="absolute top-0 right-0 w-full h-full bg-zinc-900 text-left px-4 py-6 text-sm text-gray-200 z-10 flex flex-col"
+        >
+          <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
+          <p>
+            Co-founder & systems architect. Focused on scale, infrastructure, and delivering seamless product experiences.
+          </p>
+        </motion.div>
       </div>
 
     </div>
