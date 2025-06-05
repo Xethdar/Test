@@ -381,7 +381,7 @@ export default function LandingPage() {
     Our Team
   </h2>
 
-  <div className="flex gap-10 justify-start items-start relative pl-59.9999">
+  <div className="flex gap-10 justify-start items-start relative pl-60">
 
     {/* Founder 1 */}
     <div
