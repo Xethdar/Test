@@ -4,30 +4,33 @@ import Link from "next/link"
 import { TrendingUp, ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
+import * as motion from "motion/react-client";
+import { AnimatePresence } from "motion/react";
 
 const generateToken = () => {
   return "st_" + Math.random().toString(36).substr(2, 9) + Date.now().toString(36)
 }
 
 export default function SurveyPage() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setisVisible] = useState(false)
 
   const handleToken = () => {
     const token = generateToken()
     localStorage.setItem("slicktunnel_token", token)
+    setHasToken(true)
   }
 
   useEffect(() => {
     // Load Tally embed script once on mount
-    const script = document.createElement("script")
-    script.src = "https://tally.so/widgets/embed.js"
+    const script = document.createElement("script");
+    script.src = "https://tally.so/widgets/embed.js";
     script.onload = () => {
       if (window.Tally) {
-        window.Tally.loadEmbeds()
+        window.Tally.loadEmbeds();
       }
-    }
-    document.head.appendChild(script)
-  }, [])
+    };
+    document.head.appendChild(script);
+  }, []);
 
   return (
     <div className="flex min-h-[100dvh] flex-col">
@@ -59,21 +62,58 @@ export default function SurveyPage() {
           </div>
 
           {/* Tally Form Container */}
-          <div className="w-full bg-card rounded-lg border p-8 min-h-[600px] flex items-center justify-center">
-            <div className="text-center space-y-4">
-              <div className="text-muted-foreground text-lg">
-                {/* Insert Tally integration code here */}
-                <div className="bg-muted/50 rounded-lg p-8 border-2 border-dashed border-muted-foreground/20">
-                  <p className="text-sm text-muted-foreground mb-2">Tally Form Integration</p>
-                  <p className="text-xs text-muted-foreground/60">
-                    Replace this placeholder with your Tally.io embed code
-                  </p>
-                  <div className="mt-4 text-xs text-muted-foreground/40 font-mono">
-                    {`<!-- Insert Tally integration code here -->`}
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", minHeight: "620px", gap: "48px", paddingTop: "60px" }}>
+            {/* Left Green Bar */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: isVisible ? 1 : 0 }}
+              transition={{ type: "tween", duration: 0.2 }}
+            >
+              <div style={{
+                backgroundColor: "#00ff7f",
+                height: "250px",
+                width: "1px",
+                position: "fixed",
+                marginTop: "1.5rem"
+              }} />
+            </motion.div>
+
+            {/* Center Form */}
+            <iframe
+              data-tally-src="https://tally.so/embed/mZKpjv?alignLeft=1&hideTitle=1&dynamicHeight=1"
+              loading="lazy"
+              width="100%"
+              height="fit-content"
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+              title="SlickTunnel Alpha Feedback"
+              style={{
+                border: 'none',
+                maxHeight: "2500px",
+                scrollBehavior: "smooth",
+                pointerEvents: "auto",
+                maxWidth: "750px",
+                borderRadius: "15px"
+              }}
+              onMouseEnter={() => setisVisible(true)}
+              onMouseLeave={() => setisVisible(false)}
+            ></iframe>
+
+            {/* Right Green Bar */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: isVisible ? 1 : 0 }}
+              transition={{ type: "tween", duration: 0.2 }}
+            >
+              <div style={{
+                backgroundColor: "#00ff7f",
+                height: "250px",
+                width: "1px",
+                position: "fixed",
+                marginTop: "1.5rem"
+              }} />
+            </motion.div>
           </div>
 
           {/* Additional Information */}
