@@ -388,7 +388,7 @@ export default function LandingPage() {
       className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
     >
       <img
-        src="https://via.placeholder.com/200x300"
+        src="/MacauleySlicktunnelPic.png"
         alt="Founder 1"
         className="w-full h-full object-cover"
       />
@@ -406,7 +406,7 @@ export default function LandingPage() {
           transition={{ duration: 0.4 }}
           className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
         >
-          <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
+          <h4 className="text-green-300 font-bold text-lg mb-2">Macauley Barnhardt</h4>
           <p>
             Vision-driven creator of SlickTunnel. Passionate about user experience, fast feedback loops,
             and elegant UI engineering.
@@ -424,7 +424,7 @@ export default function LandingPage() {
       className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
     >
       <img
-        src="https://via.placeholder.com/200x300"
+        src="/PremSlicktunnelPic.png"
         alt="Founder 2"
         className="w-full h-full object-cover"
       />
@@ -442,7 +442,7 @@ export default function LandingPage() {
           transition={{ duration: 0.4 }}
           className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
         >
-          <h4 className="text-green-300 font-bold text-lg mb-2">Details</h4>
+          <h4 className="text-green-300 font-bold text-lg mb-2">Prem Jain</h4>
           <p>
             Co-founder of SlickTunnel. Specializes in backend, ops, and making everything magically work under pressure.
           </p>
