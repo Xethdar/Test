@@ -372,12 +372,12 @@ export default function LandingPage() {
             </p>
 
             <p>
-              Bonds offer everyday people a smarter, more stable way to grow their money—without the wild swings of the stock market. Whether you're saving for a goal or just want reliable passive income, bonds provide predictable returns, lower risk, and often pay interest regularly. They let you invest in real companies, governments, or even startups, while helping diversify your portfolio. In a world that glorifies high-risk bets, bonds are the underrated backbone of long-term financial security.
+              Bonds offer everyday people a smarter, more stable way to grow their money—without the wild swings of the stock market. Whether you're saving for a goal or just want reliable passive income, bonds provide predictable returns, lower risk, and often pay interest regularly. They let you invest in real companies, government=s, or even startups, while helping diversify your portfolio. In a world that glorifies high-risk bets, bonds are the underrated backbone of long-term financial security.
             </p>
           </div>
           </div>
           <section className="w-full py-16 bg-black text-white overflow-hidden">
-  <h2 className="text-3xl md:text-4xl font-bold text-green-300 mb-12 text-center">Our Team</h2>
+  <h2 className="text-3xl md:text-4xl font-bold text-green-300 mb-12 text-center">We're Locked in</h2>
 
   <div className="flex gap-20 justify-center items-start relative">
 
