@@ -432,27 +432,37 @@ export default function LandingPage() {
             />
 
             {/* Founder 1 text (desktop only) */}
-            {!isMobile && (
-              <motion.div
-                initial={{ x: 0 }}
-                animate={{ x: focus === "founder1" ? 210 : 0 }}
-                transition={{ type: "tween", duration: 0.4 }}
-                className="absolute top-0 left-0 h-full"
-              >
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: focus === "founder1" ? 1 : 0 }}
-                  transition={{ duration: 0.4 }}
-                  className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
-                >
-                  <h4 className="text-green-300 font-bold text-lg mb-2">Macauley</h4>
-                  <p>
-                    Vision-driven creator of SlickTunnel. Passionate about user
-                    experience, fast feedback loops, and elegant UI engineering.
-                  </p>
-                </motion.div>
-              </motion.div>
-            )}
+            {isMobile ? (
+  // Static version for mobile
+  <div className="mt-4 w-full bg-zinc-900 border border-green-500 rounded-md px-4 py-4 text-left text-sm text-white shadow-md">
+    <h4 className="text-green-300 font-bold text-lg mb-2">Macauley</h4>
+    <p>
+      Vision-driven creator of SlickTunnel. Passionate about user
+      experience, fast feedback loops, and elegant UI engineering.
+    </p>
+  </div>
+) : (
+  // Animated version for desktop
+  <motion.div
+    initial={{ x: 0 }}
+    animate={{ x: focus === "founder1" ? 210 : 0 }}
+    transition={{ type: "tween", duration: 0.4 }}
+    className="absolute top-0 left-0 h-full"
+  >
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: focus === "founder1" ? 1 : 0 }}
+      transition={{ duration: 0.4 }}
+      className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
+    >
+      <h4 className="text-green-300 font-bold text-lg mb-2">Macauley</h4>
+      <p>
+        Vision-driven creator of SlickTunnel. Passionate about user
+        experience, fast feedback loops, and elegant UI engineering.
+      </p>
+    </motion.div>
+  </motion.div>
+)}
           </motion.div>
 
           {/* Founder 2 */}
@@ -478,29 +488,37 @@ export default function LandingPage() {
             />
 
             {/* Founder 2 text (desktop only) */}
-            {!isMobile && (
-              <motion.div
-                initial={{ x: 0 }}
-                animate={{ x: focus === "founder2" ? 210 : 0 }}
-                transition={{ type: "tween", duration: 0.4 }}
-                className="absolute top-0 left-0 h-full"
-              >
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: focus === "founder2" ? 1 : 0 }}
-                  transition={{ duration: 0.4 }}
-                  className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
-                >
-                  <h4 className="text-green-300 font-bold text-lg mb-2">
-                    Prem Jain
-                  </h4>
-                  <p>
-                    Co-founder of SlickTunnel. Specializes in backend, ops, and
-                    making everything magically work under pressure.
-                  </p>
-                </motion.div>
-              </motion.div>
-            )}
+            {isMobile ? (
+  // Static version for mobile
+  <div className="mt-4 w-full bg-zinc-900 border border-green-500 rounded-md px-4 py-4 text-left text-sm text-white shadow-md">
+    <h4 className="text-green-300 font-bold text-lg mb-2">Prem Jain</h4>
+    <p>
+      Co-founder of SlickTunnel. Specializes in backend, ops, and
+      making everything magically work under pressure.
+    </p>
+  </div>
+) : (
+  // Animated version for desktop
+  <motion.div
+    initial={{ x: 0 }}
+    animate={{ x: focus === "founder2" ? 210 : 0 }}
+    transition={{ type: "tween", duration: 0.4 }}
+    className="absolute top-0 left-0 h-full"
+  >
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: focus === "founder2" ? 1 : 0 }}
+      transition={{ duration: 0.4 }}
+      className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
+    >
+      <h4 className="text-green-300 font-bold text-lg mb-2">Prem Jain</h4>
+      <p>
+        Co-founder of SlickTunnel. Specializes in backend, ops, and
+        making everything magically work under pressure.
+      </p>
+    </motion.div>
+  </motion.div>
+)}
           </motion.div>
         </div>
       </div>
