@@ -379,7 +379,7 @@ export default function LandingPage() {
           <section className="w-full py-16 bg-black text-white overflow-hidden">
   <h2 className="text-3xl md:text-4xl font-bold text-green-300 mb-12 text-center">We're Locked in</h2>
 
-  <div className="flex gap-20 justify-center items-start relative">
+  <div className="flex gap-10 justify-center items-start relative">
 
     {/* Founder 1 */}
     <motion.div
