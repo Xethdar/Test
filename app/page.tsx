@@ -442,7 +442,7 @@ export default function LandingPage() {
                 transition={{ duration: 0.4 }}
                 className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
               >
-                <h4 className="text-green-300 font-bold text-lg mb-2">Macauley</h4>
+                <h4 className="text-green-300 font-bold text-lg mb-2">Macauley Barnhardt</h4>
                 <p>
                   Vision-driven creator of SlickTunnel. Passionate about user
                   experience, fast feedback loops, and elegant UI engineering.
