@@ -421,7 +421,7 @@ export default function LandingPage() {
     <motion.div
       onMouseEnter={() => setFocus("founder2")}
       onMouseLeave={() => setFocus(null)}
-      animate={{ x: focus === "founder1" ? 270 : focus === "founder2" ? -220 : 0 }}
+      animate={{ x: focus === "founder1" ? 300 : focus === "founder2" ? -220 : 0 }}
       transition={{ type: "tween", duration: 0.4 }}
       className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
     >
