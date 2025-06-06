@@ -385,7 +385,8 @@ export default function LandingPage() {
     <div
       onMouseEnter={() => setFocus("founder1")}
       onMouseLeave={() => setFocus(null)}
-      className="relative w-[200px] h-[300px] overflow-hidden border-4 border-green-400 rounded-md z-10"
+      className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
+
     >
       <img
         src="https://via.placeholder.com/200x300"
@@ -421,7 +422,7 @@ export default function LandingPage() {
       onMouseLeave={() => setFocus(null)}
       animate={{ x: focus === "founder1" ? 320 : 0 }}
       transition={{ type: "tween", duration: 0.4 }}
-      className="relative w-[200px] h-[300px] overflow-hidden border-4 border-green-400 rounded-md z-10"
+      className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
     >
       <img
         src="https://via.placeholder.com/200x300"
@@ -451,7 +452,6 @@ export default function LandingPage() {
     </motion.div>
   </div>
 </section>
-
         </section>
 
         <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
