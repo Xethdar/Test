@@ -383,7 +383,7 @@ export default function LandingPage() {
           <div>
             <h3 className="text-sm text-green-400 font-semibold uppercase mb-2">Our mission</h3>
             <h2 className="text-4xl md:text-5xl font-bold text-green-300 leading-tight">
-              Liberate the Bond Market & Bringing Bonds back to the people
+              Liberating the Bond Market & Bringing Bonds back to the people
             </h2>
           </div>
 
