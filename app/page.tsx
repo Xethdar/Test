@@ -410,7 +410,7 @@ export default function LandingPage() {
           </h2>
           <section className="w-full py-16 bg-black text-white overflow-hidden flex flex-col md:flex-row">
       {/* LEFT SIDE (founders) */}
-      <div className="w-full md:w-1/2 pl-6 md:pl-34 space-y-12">
+      <div className="w-full md:w-1/2 pl-6 md:pl-14 space-y-12">
 
         <div
           className={`flex ${isMobile ? "flex-col" : "flex-row"} gap-10 items-center md:items-start`}
