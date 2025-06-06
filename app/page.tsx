@@ -408,8 +408,8 @@ export default function LandingPage() {
           <section className="w-full py-16 bg-black text-white overflow-hidden flex flex-col md:flex-row">
       {/* LEFT SIDE (founders) */}
       <div className="w-full md:w-1/2 pl-6 md:pl-24 space-y-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-green-300 text-left">
-          We're Locked in
+        <h2 className="text-3xl md:text-4xl font-bold text-green-300 text-center">
+          Our Team
         </h2>
 
         <div
