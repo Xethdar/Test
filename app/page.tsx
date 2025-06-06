@@ -7,8 +7,7 @@ import { BarChart3, Shield, TrendingUp, ChevronDown, CheckCircle } from "lucide-
 import { useActionState } from "react"
 import { addToWaitlist } from "./actions"
 
-import * as motion from "motion/react-client";
-import { AnimatePresence } from "motion/react";
+import * as motion from "motion/react-client"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -22,32 +21,6 @@ const scrollToSection = (id: string) => {
     el.scrollIntoView({ behavior: "smooth" })
   }
 }
-
-export const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  const [mounted, setMounted] = useState(false); // prevents hydration mismatch
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    // Only run on client
-    if (typeof window !== "undefined") {
-      handleResize(); // Initial check
-      window.addEventListener("resize", handleResize);
-      setMounted(true);
-    }
-
-    return () => {
-      if (typeof window !== "undefined") {
-        window.removeEventListener("resize", handleResize);
-      }
-    };
-  }, []);
-
-  return mounted ? isMobile : false;
-};
 
 const ScrollToSectionCenter = (id: string) => {
   const el = document.getElementById(id)
@@ -68,7 +41,7 @@ export default function LandingPage() {
   const [animateCheckmark, setAnimateCheckmark] = useState(false)
   const [hasToken, setHasToken] = useState(false)
   const [focus, setFocus] = useState<null | "founder1" | "founder2">(null)
-  const isMobile = useIsMobile();
+  const isMobile = useIsMobile()
 
   // Check for existing token on component mount
   useEffect(() => {
@@ -378,162 +351,149 @@ export default function LandingPage() {
 
         <section id="about-us" className="w-full py-12 md:py-24 lg:py-32">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
-
-          {/* Left: Mission Statement */}
-          <div>
-            <h3 className="text-sm text-green-400 font-semibold uppercase mb-2">Our mission</h3>
-            <h2 className="text-4xl md:text-5xl font-bold text-green-300 leading-tight">
-              Liberating the Bond Market & Bringing Bonds back to the people
-            </h2>
-          </div>
-
-          {/* Right: About Content */}
-          <div className="space-y-6 text-sm md:text-base text-gray-300">
+            {/* Left: Mission Statement */}
             <div>
-              <h4 className="text-green-400 font-semibold text-sm uppercase mb-2">About us</h4>
-              <p>
-                SlickTunnel is a guidance platform built to democratize access to fixed-income investing. 
-              </p>
+              <h3 className="text-sm text-green-400 font-semibold uppercase mb-2">Our mission</h3>
+              <h2 className="text-4xl md:text-5xl font-bold text-green-300 leading-tight">
+                Liberating the Bond Market & Bringing Bonds back to the people
+              </h2>
             </div>
 
-            <p>
-              We empower young professionals, students, and forward-thinking investors to discover and explore high-yield opportunities—without giving up equity. By curating startup and institutional bond data in one sleek, easy-to-use interface, SlickTunnel is redefining how a new generation builds wealth with confidence and control.
-            </p>
+            {/* Right: About Content */}
+            <div className="space-y-6 text-sm md:text-base text-gray-300">
+              <div>
+                <h4 className="text-green-400 font-semibold text-sm uppercase mb-2">About us</h4>
+                <p>SlickTunnel is a guidance platform built to democratize access to fixed-income investing.</p>
+              </div>
 
-            <p>
-              Bonds offer everyday people a smarter, more stable way to grow their money—without the wild swings of the stock market. Whether you're saving for a goal or just want reliable passive income, bonds provide predictable returns, lower risk, and often pay interest regularly. They let you invest in real companies, government=s, or even startups, while helping diversify your portfolio. In a world that glorifies high-risk bets, bonds are the underrated backbone of long-term financial security.
-            </p>
-          </div>
+              <p>
+                We empower young professionals, students, and forward-thinking investors to discover and explore
+                high-yield opportunities—without giving up equity. By curating startup and institutional bond data in
+                one sleek, easy-to-use interface, SlickTunnel is redefining how a new generation builds wealth with
+                confidence and control.
+              </p>
+
+              <p>
+                Bonds offer everyday people a smarter, more stable way to grow their money—without the wild swings of
+                the stock market. Whether you're saving for a goal or just want reliable passive income, bonds provide
+                predictable returns, lower risk, and often pay interest regularly. They let you invest in real
+                companies, government=s, or even startups, while helping diversify your portfolio. In a world that
+                glorifies high-risk bets, bonds are the underrated backbone of long-term financial security.
+              </p>
+            </div>
           </div>
           <section className="w-full py-16 bg-black text-white flex flex-col md:flex-row">
-  {/* LEFT SIDE (founders) */}
-  <div className="w-full md:w-1/2 pl-6 pr-4 md:pl-24 md:pr-0 space-y-12">
-    <div
-      className={`flex ${isMobile ? "flex-col" : "flex-row"} gap-10 items-center md:items-start`}
-    >
-      {/* Founder 1 */}
-      <div className="flex flex-col items-center md:items-start">
-        <motion.div
-          onMouseEnter={() => !isMobile && setFocus("founder1")}
-          onMouseLeave={() => !isMobile && setFocus(null)}
-          animate={{
-            x: isMobile ? 0 : focus === "founder2" ? 0 : 0,
-          }}
-          transition={{ type: "tween", duration: 0.4 }}
-          className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
-        >
-          <img
-            src="/MacauleySlicktunnelPic.png"
-            alt="Founder 1"
-            className="w-full h-full object-cover"
-          />
+            {/* LEFT SIDE (founders) */}
+            <div className="w-full md:w-1/2 pl-6 pr-4 md:pl-6 md:pr-0 space-y-12">
+              <div className={`flex ${isMobile ? "flex-col" : "flex-row"} gap-10 items-center md:items-start`}>
+                {/* Founder 1 */}
+                <div className="flex flex-col items-center md:items-start">
+                  <motion.div
+                    onMouseEnter={() => !isMobile && setFocus("founder1")}
+                    onMouseLeave={() => !isMobile && setFocus(null)}
+                    animate={{
+                      x: isMobile ? 0 : focus === "founder2" ? 0 : 0,
+                    }}
+                    transition={{ type: "tween", duration: 0.4 }}
+                    className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
+                  >
+                    <img src="/MacauleySlicktunnelPic.png" alt="Founder 1" className="w-full h-full object-cover" />
 
-          {/* Desktop animated hover text */}
-          {!isMobile && (
-            <motion.div
-              initial={{ x: 0 }}
-              animate={{ x: focus === "founder1" ? 210 : 0 }}
-              transition={{ type: "tween", duration: 0.4 }}
-              className="absolute top-0 left-0 h-full"
-            >
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: focus === "founder1" ? 1 : 0 }}
-                transition={{ duration: 0.4 }}
-                className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
-              >
-                <h4 className="text-green-300 font-bold text-lg mb-2">Macauley Barnhardt</h4>
-                <p>
-                  Vision-driven creator of SlickTunnel. Passionate about user
-                  experience, fast feedback loops, and elegant UI engineering.
-                </p>
-              </motion.div>
-            </motion.div>
-          )}
-        </motion.div>
+                    {/* Desktop animated hover text */}
+                    {!isMobile && (
+                      <motion.div
+                        initial={{ x: 0 }}
+                        animate={{ x: focus === "founder1" ? 210 : 0 }}
+                        transition={{ type: "tween", duration: 0.4 }}
+                        className="absolute top-0 left-0 h-full"
+                      >
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: focus === "founder1" ? 1 : 0 }}
+                          transition={{ duration: 0.4 }}
+                          className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
+                        >
+                          <h4 className="text-green-300 font-bold text-lg mb-2">Macauley Barnhardt</h4>
+                          <p>
+                            Vision-driven creator of SlickTunnel. Passionate about user experience, fast feedback loops,
+                            and elegant UI engineering.
+                          </p>
+                        </motion.div>
+                      </motion.div>
+                    )}
+                  </motion.div>
 
-        {/* Mobile static text */}
-        {isMobile && (
-          <div className="mt-4 w-[90%] mx-auto bg-zinc-900 border border-green-500 rounded-md px-4 py-4 text-left text-sm text-white shadow-md">
-            <h4 className="text-green-300 font-bold text-lg mb-2">Macauley</h4>
-            <p>
-              Vision-driven creator of SlickTunnel. Passionate about user
-              experience, fast feedback loops, and elegant UI engineering.
-            </p>
-          </div>
-        )}
-      </div>
+                  {/* Mobile static text */}
+                  {isMobile && (
+                    <div className="mt-4 w-[90%] mx-auto bg-zinc-900 border border-green-500 rounded-md px-4 py-4 text-left text-sm text-white shadow-md">
+                      <h4 className="text-green-300 font-bold text-lg mb-2">Macauley</h4>
+                      <p>
+                        Vision-driven creator of SlickTunnel. Passionate about user experience, fast feedback loops, and
+                        elegant UI engineering.
+                      </p>
+                    </div>
+                  )}
+                </div>
 
-      {/* Founder 2 */}
-      <div className="flex flex-col items-center md:items-start">
-        <motion.div
-          onMouseEnter={() => !isMobile && setFocus("founder2")}
-          onMouseLeave={() => !isMobile && setFocus(null)}
-          animate={{
-            x: isMobile
-              ? 0
-              : focus === "founder1"
-              ? 290
-              : focus === "founder2"
-              ? 0
-              : 0,
-          }}
-          transition={{ type: "tween", duration: 0.4 }}
-          className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
-        >
-          <img
-            src="/PremSlicktunnelPic.png"
-            alt="Founder 2"
-            className="w-full h-full object-cover"
-          />
+                {/* Founder 2 */}
+                <div className="flex flex-col items-center md:items-start">
+                  <motion.div
+                    onMouseEnter={() => !isMobile && setFocus("founder2")}
+                    onMouseLeave={() => !isMobile && setFocus(null)}
+                    animate={{
+                      x: isMobile ? 0 : focus === "founder1" ? 290 : focus === "founder2" ? 0 : 0,
+                    }}
+                    transition={{ type: "tween", duration: 0.4 }}
+                    className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
+                  >
+                    <img src="/PremSlicktunnelPic.png" alt="Founder 2" className="w-full h-full object-cover" />
 
-          {/* Desktop animated hover text */}
-          {!isMobile && (
-            <motion.div
-              initial={{ x: 0 }}
-              animate={{ x: focus === "founder2" ? 210 : 0 }}
-              transition={{ type: "tween", duration: 0.4 }}
-              className="absolute top-0 left-0 h-full"
-            >
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: focus === "founder2" ? 1 : 0 }}
-                transition={{ duration: 0.4 }}
-                className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
-              >
-                <h4 className="text-green-300 font-bold text-lg mb-2">Prem Jain</h4>
-                <p>
-                  Co-founder of SlickTunnel. Specializes in backend, ops, and
-                  making everything magically work under pressure.
-                </p>
-              </motion.div>
-            </motion.div>
-          )}
-        </motion.div>
+                    {/* Desktop animated hover text */}
+                    {!isMobile && (
+                      <motion.div
+                        initial={{ x: 0 }}
+                        animate={{ x: focus === "founder2" ? 210 : 0 }}
+                        transition={{ type: "tween", duration: 0.4 }}
+                        className="absolute top-0 left-0 h-full"
+                      >
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: focus === "founder2" ? 1 : 0 }}
+                          transition={{ duration: 0.4 }}
+                          className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
+                        >
+                          <h4 className="text-green-300 font-bold text-lg mb-2">Prem Jain</h4>
+                          <p>
+                            Co-founder of SlickTunnel. Specializes in backend, ops, and making everything magically work
+                            under pressure.
+                          </p>
+                        </motion.div>
+                      </motion.div>
+                    )}
+                  </motion.div>
 
-        {/* Mobile static text */}
-        {isMobile && (
-          <div className="mt-4 w-[90%] mx-auto bg-zinc-900 border border-green-500 rounded-md px-4 py-4 text-left text-sm text-white shadow-md">
-            <h4 className="text-green-300 font-bold text-lg mb-2">Prem Jain</h4>
-            <p>
-              Co-founder of SlickTunnel. Specializes in backend, ops, and
-              making everything magically work under pressure.
-            </p>
-          </div>
-        )}
-      </div>
-    </div>
-  </div>
+                  {/* Mobile static text */}
+                  {isMobile && (
+                    <div className="mt-4 w-[90%] mx-auto bg-zinc-900 border border-green-500 rounded-md px-4 py-4 text-left text-sm text-white shadow-md">
+                      <h4 className="text-green-300 font-bold text-lg mb-2">Prem Jain</h4>
+                      <p>
+                        Co-founder of SlickTunnel. Specializes in backend, ops, and making everything magically work
+                        under pressure.
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
 
-  {/* RIGHT SIDE headline (desktop only) */}
-  {!isMobile && (
-    <div className="w-1/2 hidden md:flex justify-center items-center pr-6">
-      <h3 className="text-5xl font-bold text-green-400 whitespace-nowrap">
-        We Are Locked In
-      </h3>
-    </div>
-  )}
-</section>
+            {/* RIGHT SIDE headline (desktop only) */}
+            {!isMobile && (
+              <div className="w-1/2 hidden md:flex flex-col justify-center items-center pr-6">
+                <p className="text-green-400 text-sm font-semibold tracking-widest mb-2 uppercase">Our Team</p>
+                <h3 className="text-5xl font-bold text-green-400 whitespace-nowrap">We Are Locked In</h3>
+              </div>
+            )}
+          </section>
         </section>
 
         <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
