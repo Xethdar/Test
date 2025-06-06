@@ -407,7 +407,7 @@ export default function LandingPage() {
           </div>
           <section className="w-full py-16 bg-black text-white flex flex-col md:flex-row">
   {/* LEFT SIDE (founders) */}
-  <div className="w-full md:w-1/2 pl-8 pr-4 md:pl-24 md:pr-0 space-y-12">
+  <div className="w-full md:w-1/2 pl-6 pr-4 md:pl-24 md:pr-0 space-y-12">
     <div
       className={`flex ${isMobile ? "flex-col" : "flex-row"} gap-10 items-center md:items-start`}
     >
@@ -527,11 +527,11 @@ export default function LandingPage() {
 
   {/* RIGHT SIDE headline (desktop only) */}
   {!isMobile && (
-    <div className="w-1/2 hidden md:flex flex-col justify-center items-center pr-6">
-  <h3 className="text-5xl font-bold text-green-400 whitespace-nowrap">
-    We Are Locked In
-  </h3>
-</div>
+    <div className="w-1/2 hidden md:flex justify-center items-center pr-6">
+      <h3 className="text-5xl font-bold text-green-400 whitespace-nowrap">
+        We Are Locked
+      </h3>
+    </div>
   )}
 </section>
         </section>
