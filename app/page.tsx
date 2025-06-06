@@ -21,6 +21,17 @@ const scrollToSection = (id: string) => {
   }
 }
 
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth < 768);
+    onResize();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+  return isMobile;
+};
+
 const ScrollToSectionCenter = (id: string) => {
   const el = document.getElementById(id)
   if (el) {
@@ -376,83 +387,115 @@ export default function LandingPage() {
             </p>
           </div>
           </div>
-          <section className="w-full py-16 bg-black text-white overflow-hidden">
-  <h2 className="text-3xl md:text-4xl font-bold text-green-300 mb-12 text-center">We're Locked in</h2>
+          <section className="w-full py-16 bg-black text-white overflow-hidden flex flex-col md:flex-row">
+      {/* LEFT SIDE (founders) */}
+      <div className="w-full md:w-1/2 pl-6 md:pl-24 space-y-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-green-300 text-left">
+          We're Locked in
+        </h2>
 
-  <div className="flex gap-10 justify-center items-start relative">
-
-    {/* Founder 1 */}
-    <motion.div
-      onMouseEnter={() => setFocus("founder1")}
-      onMouseLeave={() => setFocus(null)}
-      animate={{ x: focus === "founder2" ? -220 : 0 }}
-      transition={{ type: "tween", duration: 0.4 }}
-      className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
-    >
-      <img
-        src="/MacauleySlicktunnelPic.png"
-        alt="Founder 1"
-        className="w-full h-full object-cover"
-      />
-
-      {/* Text Sliding Out of Founder 1 */}
-      <motion.div
-        initial={{ x: 0 }}
-        animate={{ x: focus === "founder1" ? 210 : 0 }}
-        transition={{ type: "tween", duration: 0.4 }}
-        className="absolute top-0 left-0 h-full"
-      >
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: focus === "founder1" ? 1 : 0 }}
-          transition={{ duration: 0.4 }}
-          className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
+        <div
+          className={`flex ${isMobile ? "flex-col" : "flex-row"} gap-10 items-center md:items-start`}
         >
-          <h4 className="text-green-300 font-bold text-lg mb-2">Macauley</h4>
-          <p>
-            Vision-driven creator of SlickTunnel. Passionate about user experience, fast feedback loops,
-            and elegant UI engineering.
-          </p>
-        </motion.div>
-      </motion.div>
-    </motion.div>
+          {/* Founder 1 */}
+          <motion.div
+            onMouseEnter={() => !isMobile && setFocus("founder1")}
+            onMouseLeave={() => !isMobile && setFocus(null)}
+            animate={{
+              x: isMobile ? 0 : focus === "founder2" ? -220 : 0,
+            }}
+            transition={{ type: "tween", duration: 0.4 }}
+            className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
+          >
+            <img
+              src="/MacauleySlicktunnelPic.png"
+              alt="Founder 1"
+              className="w-full h-full object-cover"
+            />
 
-    {/* Founder 2 */}
-    <motion.div
-      onMouseEnter={() => setFocus("founder2")}
-      onMouseLeave={() => setFocus(null)}
-      animate={{ x: focus === "founder1" ? 290 : focus === "founder2" ? -220 : 0 }}
-      transition={{ type: "tween", duration: 0.4 }}
-      className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
-    >
-      <img
-        src="/PremSlicktunnelPic.png"
-        alt="Founder 2"
-        className="w-full h-full object-cover"
-      />
+            {/* Founder 1 text (desktop only) */}
+            {!isMobile && (
+              <motion.div
+                initial={{ x: 0 }}
+                animate={{ x: focus === "founder1" ? 210 : 0 }}
+                transition={{ type: "tween", duration: 0.4 }}
+                className="absolute top-0 left-0 h-full"
+              >
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: focus === "founder1" ? 1 : 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
+                >
+                  <h4 className="text-green-300 font-bold text-lg mb-2">Macauley</h4>
+                  <p>
+                    Vision-driven creator of SlickTunnel. Passionate about user
+                    experience, fast feedback loops, and elegant UI engineering.
+                  </p>
+                </motion.div>
+              </motion.div>
+            )}
+          </motion.div>
 
-      {/* Text Sliding Out of Founder 2 */}
-      <motion.div
-        initial={{ x: 0 }}
-        animate={{ x: focus === "founder2" ? 210 : 0 }}
-        transition={{ type: "tween", duration: 0.4 }}
-        className="absolute top-0 left-0 h-full"
-      >
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: focus === "founder2" ? 1 : 0 }}
-          transition={{ duration: 0.4 }}
-          className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
-        >
-          <h4 className="text-green-300 font-bold text-lg mb-2">Prem Jain</h4>
-          <p>
-            Co-founder of SlickTunnel. Specializes in backend, ops, and making everything magically work under pressure.
-          </p>
-        </motion.div>
-      </motion.div>
-    </motion.div>
-  </div>
-</section>
+          {/* Founder 2 */}
+          <motion.div
+            onMouseEnter={() => !isMobile && setFocus("founder2")}
+            onMouseLeave={() => !isMobile && setFocus(null)}
+            animate={{
+              x: isMobile
+                ? 0
+                : focus === "founder1"
+                ? 290
+                : focus === "founder2"
+                ? -220
+                : 0,
+            }}
+            transition={{ type: "tween", duration: 0.4 }}
+            className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
+          >
+            <img
+              src="/PremSlicktunnelPic.png"
+              alt="Founder 2"
+              className="w-full h-full object-cover"
+            />
+
+            {/* Founder 2 text (desktop only) */}
+            {!isMobile && (
+              <motion.div
+                initial={{ x: 0 }}
+                animate={{ x: focus === "founder2" ? 210 : 0 }}
+                transition={{ type: "tween", duration: 0.4 }}
+                className="absolute top-0 left-0 h-full"
+              >
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: focus === "founder2" ? 1 : 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
+                >
+                  <h4 className="text-green-300 font-bold text-lg mb-2">
+                    Prem Jain
+                  </h4>
+                  <p>
+                    Co-founder of SlickTunnel. Specializes in backend, ops, and
+                    making everything magically work under pressure.
+                  </p>
+                </motion.div>
+              </motion.div>
+            )}
+          </motion.div>
+        </div>
+      </div>
+
+      {/* RIGHT SIDE headline (desktop only) */}
+      {!isMobile && (
+        <div className="w-1/2 hidden md:flex justify-center items-center pr-6">
+          <h3 className="text-5xl font-bold text-green-400 whitespace-nowrap">
+            We Are Locked In
+          </h3>
+        </div>
+      )}
+    </section>
         </section>
 
         <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
