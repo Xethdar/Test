@@ -420,7 +420,7 @@ export default function LandingPage() {
             onMouseEnter={() => !isMobile && setFocus("founder1")}
             onMouseLeave={() => !isMobile && setFocus(null)}
             animate={{
-              x: isMobile ? 0 : focus === "founder2" ? -220 : 0,
+              x: isMobile ? 0 : focus === "founder2" ? -160 : 0,
             }}
             transition={{ type: "tween", duration: 0.4 }}
             className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
@@ -465,7 +465,7 @@ export default function LandingPage() {
                 : focus === "founder1"
                 ? 290
                 : focus === "founder2"
-                ? -220
+                ? -160
                 : 0,
             }}
             transition={{ type: "tween", duration: 0.4 }}
