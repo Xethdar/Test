@@ -23,12 +23,16 @@ const scrollToSection = (id: string) => {
 
 const useIsMobile = () => {
   const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
+    if (typeof window === "undefined") return; // SSR guard
+
     const onResize = () => setIsMobile(window.innerWidth < 768);
-    onResize();
+    onResize(); // set initial value
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
+
   return isMobile;
 };
 
