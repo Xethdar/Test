@@ -382,9 +382,11 @@ export default function LandingPage() {
   <div className="flex gap-20 justify-center items-start relative">
 
     {/* Founder 1 */}
-    <div
+    <motion.div
       onMouseEnter={() => setFocus("founder1")}
       onMouseLeave={() => setFocus(null)}
+      animate={{ x: focus === "founder2" ? -160 : 0 }}
+      transition={{ type: "tween", duration: 0.4 }}
       className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
     >
       <img
@@ -393,7 +395,7 @@ export default function LandingPage() {
         className="w-full h-full object-cover"
       />
 
-      {/* Text Sliding Out of Image */}
+      {/* Text Sliding Out of Founder 1 */}
       <motion.div
         initial={{ x: 0 }}
         animate={{ x: focus === "founder1" ? 210 : 0 }}
@@ -406,20 +408,20 @@ export default function LandingPage() {
           transition={{ duration: 0.4 }}
           className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
         >
-          <h4 className="text-green-300 font-bold text-lg mb-2">Macauley Barnhardt</h4>
+          <h4 className="text-green-300 font-bold text-lg mb-2">Macauley</h4>
           <p>
             Vision-driven creator of SlickTunnel. Passionate about user experience, fast feedback loops,
             and elegant UI engineering.
           </p>
         </motion.div>
       </motion.div>
-    </div>
+    </motion.div>
 
     {/* Founder 2 */}
     <motion.div
       onMouseEnter={() => setFocus("founder2")}
       onMouseLeave={() => setFocus(null)}
-      animate={{ x: focus === "founder1" ? 320 : 0 }}
+      animate={{ x: focus === "founder1" ? 210 : focus === "founder2" ? -160 : 0 }}
       transition={{ type: "tween", duration: 0.4 }}
       className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
     >
@@ -429,7 +431,7 @@ export default function LandingPage() {
         className="w-full h-full object-cover"
       />
 
-      {/* Text from Founder 2 */}
+      {/* Text Sliding Out of Founder 2 */}
       <motion.div
         initial={{ x: 0 }}
         animate={{ x: focus === "founder2" ? 210 : 0 }}
@@ -451,6 +453,7 @@ export default function LandingPage() {
     </motion.div>
   </div>
 </section>
+
         </section>
 
         <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
