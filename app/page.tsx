@@ -527,11 +527,12 @@ export default function LandingPage() {
 
   {/* RIGHT SIDE headline (desktop only) */}
   {!isMobile && (
-    <div className="w-1/2 hidden md:flex justify-center items-center pr-6">
-      <h3 className="text-5xl font-bold text-green-400 whitespace-nowrap">
-        We Are Locked In
-      </h3>
-    </div>
+    <div className="w-1/2 hidden md:flex flex-col justify-center items-center pr-6">
+  <p className="text-sm text-green-300 tracking-widest mb-2">TEAM</p>
+  <h3 className="text-5xl font-bold text-green-400 whitespace-nowrap">
+    We Are Locked In
+  </h3>
+</div>
   )}
 </section>
         </section>
