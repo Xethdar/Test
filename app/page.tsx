@@ -529,7 +529,7 @@ export default function LandingPage() {
   {!isMobile && (
     <div className="w-1/2 hidden md:flex justify-center items-center pr-6">
       <h3 className="text-5xl font-bold text-green-400 whitespace-nowrap">
-        We Are Locked
+        We Are Locked In
       </h3>
     </div>
   )}
