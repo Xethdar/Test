@@ -421,7 +421,7 @@ export default function LandingPage() {
     <motion.div
       onMouseEnter={() => setFocus("founder2")}
       onMouseLeave={() => setFocus(null)}
-      animate={{ x: focus === "founder1" ? 210 : focus === "founder2" ? -160 : 0 }}
+      animate={{ x: focus === "founder1" ? 230 : focus === "founder2" ? -160 : 0 }}
       transition={{ type: "tween", duration: 0.4 }}
       className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
     >
@@ -453,7 +453,6 @@ export default function LandingPage() {
     </motion.div>
   </div>
 </section>
-
         </section>
 
         <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
