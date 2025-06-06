@@ -417,7 +417,7 @@ export default function LandingPage() {
           onMouseEnter={() => !isMobile && setFocus("founder1")}
           onMouseLeave={() => !isMobile && setFocus(null)}
           animate={{
-            x: isMobile ? 0 : focus === "founder2" ? -80 : 0,
+            x: isMobile ? 0 : focus === "founder2" ? 0 : 0,
           }}
           transition={{ type: "tween", duration: 0.4 }}
           className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
@@ -475,7 +475,7 @@ export default function LandingPage() {
               : focus === "founder1"
               ? 290
               : focus === "founder2"
-              ? -80
+              ? 0
               : 0,
           }}
           transition={{ type: "tween", duration: 0.4 }}
@@ -527,11 +527,14 @@ export default function LandingPage() {
 
   {/* RIGHT SIDE headline (desktop only) */}
   {!isMobile && (
-    <div className="w-1/2 hidden md:flex justify-center items-center pr-6">
-      <h3 className="text-5xl font-bold text-green-400 whitespace-nowrap">
-        We Are Locked
-      </h3>
-    </div>
+    <div className="w-1/2 hidden md:flex flex-col justify-center items-center pr-6">
+  <p className="text-green-400 text-sm font-semibold tracking-widest mb-2 uppercase">
+    COMMITMENT
+  </p>
+  <h3 className="text-5xl font-bold text-green-400 whitespace-nowrap">
+    We Are Locked In
+  </h3>
+</div>
   )}
 </section>
         </section>
