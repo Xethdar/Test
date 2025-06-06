@@ -405,7 +405,7 @@ export default function LandingPage() {
             </p>
           </div>
           </div>
-          <h2 className="mt-12 text-3xl md:text-4xl font-bold text-green-300 text-center">
+          <h2 className="mt-12 text-3xl md:text-4xl font-bold text-green-300 text-center" style={{color: "green"}}>
             Our Team
           </h2>
           <section className="w-full py-16 bg-black text-white overflow-hidden flex flex-col md:flex-row">
