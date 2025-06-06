@@ -405,9 +405,6 @@ export default function LandingPage() {
             </p>
           </div>
           </div>
-          <h2 className="mt-12 text-3xl md:text-4xl font-bold text-green-400 text-center">
-            Our Team
-          </h2>
           <section className="w-full py-16 bg-black text-white flex flex-col md:flex-row">
   {/* LEFT SIDE (founders) */}
   <div className="w-full md:w-1/2 px-4 md:pl-24 md:pr-0 space-y-12">
