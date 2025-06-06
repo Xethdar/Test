@@ -457,7 +457,7 @@ export default function LandingPage() {
 
         {/* Mobile static text */}
         {isMobile && (
-          <div className="mt-4 w-full bg-zinc-900 border border-green-500 rounded-md px-4 py-4 text-left text-sm text-white shadow-md">
+          <div className="mt-4 w-[90%] mx-auto bg-zinc-900 border border-green-500 rounded-md px-4 py-4 text-left text-sm text-white shadow-md">
             <h4 className="text-green-300 font-bold text-lg mb-2">Macauley</h4>
             <p>
               Vision-driven creator of SlickTunnel. Passionate about user
@@ -516,7 +516,7 @@ export default function LandingPage() {
 
         {/* Mobile static text */}
         {isMobile && (
-          <div className="mt-4 w-full bg-zinc-900 border border-green-500 rounded-md px-4 py-4 text-left text-sm text-white shadow-md">
+          <div className="mt-4 w-[90%] mx-auto bg-zinc-900 border border-green-500 rounded-md px-4 py-4 text-left text-sm text-white shadow-md">
             <h4 className="text-green-300 font-bold text-lg mb-2">Prem Jain</h4>
             <p>
               Co-founder of SlickTunnel. Specializes in backend, ops, and
