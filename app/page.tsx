@@ -14,6 +14,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { toast } from "@/hooks/use-toast"
 
+import { useIsMobile } from "@/hooks/useIsMobile"
+
 const scrollToSection = (id: string) => {
   const el = document.getElementById(id)
   if (el) {
@@ -21,19 +23,30 @@ const scrollToSection = (id: string) => {
   }
 }
 
-const useIsMobile = () => {
+export const useIsMobile = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false); // prevents hydration mismatch
 
   useEffect(() => {
-    if (typeof window === "undefined") return; // SSR guard
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
 
-    const onResize = () => setIsMobile(window.innerWidth < 768);
-    onResize(); // set initial value
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
+    // Only run on client
+    if (typeof window !== "undefined") {
+      handleResize(); // Initial check
+      window.addEventListener("resize", handleResize);
+      setMounted(true);
+    }
+
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
   }, []);
 
-  return isMobile;
+  return mounted ? isMobile : false;
 };
 
 const ScrollToSectionCenter = (id: string) => {
@@ -55,6 +68,7 @@ export default function LandingPage() {
   const [animateCheckmark, setAnimateCheckmark] = useState(false)
   const [hasToken, setHasToken] = useState(false)
   const [focus, setFocus] = useState<null | "founder1" | "founder2">(null)
+  const isMobile = useIsMobile();
 
   // Check for existing token on component mount
   useEffect(() => {
