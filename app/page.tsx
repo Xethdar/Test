@@ -349,7 +349,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="about-us" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="about-us" className="w-full py-12 md:py-23 lg:py-32">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Left: Mission Statement */}
             <div>
@@ -382,7 +382,7 @@ export default function LandingPage() {
               </p>
             </div>
           </div>
-          <section className="w-full py-16 pl-24 bg-black text-white flex flex-col md:flex-row">
+          <section className="w-full py-16 pl-22 bg-black text-white flex flex-col md:flex-row">
             {/* LEFT SIDE (founders) */}
             <div className="w-full md:w-1/2 pl-20 pr-4 md:pl-20 md:pr-0 space-y-12">
               <div className={`flex ${isMobile ? "flex-col" : "flex-row"} gap-10 items-center md:items-start`}>
@@ -488,8 +488,8 @@ export default function LandingPage() {
 
             {/* RIGHT SIDE headline (desktop only) */}
             {!isMobile && (
-              <div className="w-1/2 hidden md:flex flex-col justify-center items-start pr-3 pl-3">
-                <div className="ml-auto">
+              <div className="w-1/2 hidden md:flex flex-col justify-center items-start pr-6 pl-2">
+                <div className="ml-0">
                   <p className="text-green-400 text-sm font-semibold tracking-widest mb-2 uppercase">
                     Our Team
                   </p>
