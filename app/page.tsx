@@ -384,7 +384,7 @@ export default function LandingPage() {
           </div>
           <section className="w-full py-16 bg-black text-white flex flex-col md:flex-row">
             {/* LEFT SIDE (founders) */}
-            <div className="w-full md:w-1/2 pl-6 pr-4 md:pl-6 md:pr-0 space-y-12">
+            <div className="w-full md:w-1/2 pl-12 pr-4 md:pl-12 md:pr-0 space-y-12">
               <div className={`flex ${isMobile ? "flex-col" : "flex-row"} gap-10 items-center md:items-start`}>
                 {/* Founder 1 */}
                 <div className="flex flex-col items-center md:items-start">
@@ -488,7 +488,7 @@ export default function LandingPage() {
 
             {/* RIGHT SIDE headline (desktop only) */}
             {!isMobile && (
-              <div className="w-1/2 hidden md:flex flex-col justify-center items-start pr-6">
+              <div className="w-1/2 hidden md:flex flex-col justify-center items-start pr-6 pl-6">
                 <p className="text-green-400 text-sm font-semibold tracking-widest mb-2 uppercase">
                   Our Team
                 </p>
