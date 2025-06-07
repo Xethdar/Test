@@ -457,7 +457,7 @@ export default function LandingPage() {
                         >
                           <h4 className="text-green-300 font-bold text-lg mb-2">Prem Jain</h4>
                           <p>
-                            Founder & CEO. Extremely passionate about solving fundamental problems humanity is facing. Since Prem was a kid, his primary goal was to be as useful to humanity as possible. Came up with the idea for SlickTunnel 3 years ago, after trying to buy a bond, and realizing how rigged and flawed the bond market was. Most importantly, Prem never compromises on matters of principle.
+                            Founder & CEO. Extremely passionate about solving fundamental problems humanity is facing. Since Prem was a kid, his primary goal was to be as useful to humanity as possible. Came up with the idea for SlickTunnel 3 years ago, after trying to buy a bond, and realizing how flawed the bond market was. He never compromises on matters of principle.
                           </p>
                         </motion.div>
                       </motion.div>
