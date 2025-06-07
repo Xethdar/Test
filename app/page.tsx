@@ -87,6 +87,7 @@ export default function LandingPage() {
     <>
       {/* browser logo */}
       <Head>
+        <title>SlickTunnel</title>
         <link rel="icon" type="image/png" href="/PremSlicktunnelPic.png" />
       </Head>
       {/* browser logo */}
