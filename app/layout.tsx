@@ -9,13 +9,6 @@ export const metadata = {
   title: "SlickTunnel - Simplifying Bond Investments",
   description: "SlickTunnel makes investing in bonds accessible, transparent, and efficient.",
   generator: "v0.dev",
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "32x32" },
-      { url: "/SlicktunnelFavicon.png", sizes: "any" },
-    ],
-    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
-  },
 }
 
 export default function RootLayout({
@@ -27,9 +20,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* browser logo */}
-        <link rel="icon" href="/SlicktunnelFavicon.png" />
-        <link rel="shortcut icon" href="/SlicktunnelFavicon.png" />
-        <link rel="apple-touch-icon" href="/SlicktunnelFavicon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         {/* browser logo */}
       </head>
       <body className={inter.className}>
