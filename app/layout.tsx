@@ -10,9 +10,9 @@ export const metadata = {
   description: "SlickTunnel makes investing in bonds accessible, transparent, and efficient.",
   generator: "v0.dev",
   icons: {
-    icon: "/SlicktunnelLogo.jpg",
-    shortcut: "/SlicktunnelLogo.jpg",
-    apple: "/SlicktunnelLogo.jpg",
+    icon: "/SlicktunnelFavicon.png",
+    shortcut: "/SlicktunnelFavicon.png",
+    apple: "/SlicktunnelFavicon.png",
   },
 }
 
