@@ -349,7 +349,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="about-us" className="w-full py-12 md:py-23 lg:py-32">
+        <section id="about-us" className="w-full py-12 md:py-22 lg:py-32">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Left: Mission Statement */}
             <div>
