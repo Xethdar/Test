@@ -8,7 +8,12 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "SlickTunnel - Simplifying Bond Investments",
   description: "SlickTunnel makes investing in bonds accessible, transparent, and efficient.",
-    generator: 'v0.dev'
+  generator: "v0.dev",
+  icons: {
+    icon: "/PremSlicktunnelPic.png",
+    shortcut: "/PremSlicktunnelPic.png",
+    apple: "/PremSlicktunnelPic.png",
+  },
 }
 
 export default function RootLayout({

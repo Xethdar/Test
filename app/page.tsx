@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import Head from "next/head"
 import { BarChart3, Shield, TrendingUp, ChevronDown, CheckCircle } from "lucide-react"
 import { useActionState } from "react"
 import { addToWaitlist } from "./actions"
@@ -85,13 +84,6 @@ export default function LandingPage() {
 
   return (
     <>
-      {/* browser logo */}
-      <Head>
-        <title>SlickTunnel</title>
-        <link rel="icon" type="image/png" href="/PremSlicktunnelPic.png" />
-      </Head>
-      {/* browser logo */}
-
       <div className="flex min-h-[100dvh] flex-col">
         <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <div className="container flex h-16 items-center justify-between">
