@@ -382,9 +382,9 @@ export default function LandingPage() {
               </p>
             </div>
           </div>
-          <section className="w-full py-16 bg-black text-white flex flex-col md:flex-row">
+          <section className="w-full py-16 pl-16 bg-black text-white flex flex-col md:flex-row">
             {/* LEFT SIDE (founders) */}
-            <div className="w-full md:w-1/2 pl-50 pr-4 md:pl-50 md:pr-0 space-y-12">
+            <div className="w-full md:w-1/2 pl-20 pr-4 md:pl-20 md:pr-0 space-y-12">
               <div className={`flex ${isMobile ? "flex-col" : "flex-row"} gap-10 items-center md:items-start`}>
                 {/* Founder 1 */}
                 <div className="flex flex-col items-center md:items-start">
