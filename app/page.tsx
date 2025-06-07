@@ -363,22 +363,17 @@ export default function LandingPage() {
             <div className="space-y-6 text-sm md:text-base text-gray-300">
               <div>
                 <h4 className="text-green-400 font-semibold text-sm uppercase mb-2">About us</h4>
-                <p>SlickTunnel is a guidance platform built to democratize access to fixed-income investing.</p>
+                <p>
+                  SlickTunnel is a guidance platform built to democratize access to fixed-income investing.
+                </p>
               </div>
 
               <p>
-                We empower young professionals, students, and forward-thinking investors to discover and explore
-                high-yield opportunities—without giving up equity. By curating startup and institutional bond data in
-                one sleek, easy-to-use interface, SlickTunnel is redefining how a new generation builds wealth with
-                confidence and control.
+                Bonds offer everyday people a smarter, more stable way to grow their money—without the volatility of the stock market. The Bond Market is a larger and safer market than the Stock Market. It’s one of the best long-term assets to hold. Whether you're saving for a goal or just want reliable passive income, bonds provide predictable returns, lower risk, and often pay interest regularly. They let you invest in real companies, governments, or even startups while helping diversify your portfolio. In a world that glorifies high-risk bets, bonds are the underrated backbone of long-term financial security.
               </p>
 
               <p>
-                Bonds offer everyday people a smarter, more stable way to grow their money—without the wild swings of
-                the stock market. Whether you're saving for a goal or just want reliable passive income, bonds provide
-                predictable returns, lower risk, and often pay interest regularly. They let you invest in real
-                companies, government=s, or even startups, while helping diversify your portfolio. In a world that
-                glorifies high-risk bets, bonds are the underrated backbone of long-term financial security.
+                In recent years, bond market investing has become increasingly harder, as the market gets monopolized by a few powerful financial institutions; banks, asset managers, foreign governments, etc. There used to be a time when regular people in places like the United States funded the nation's war efforts via bonds. Now the descendants of the same people who built the greatest country in the world and had its government in their debt, no longer have an understanding of the Bond Market. Nobody wanted to solve this problem, so we took it upon ourselves to—SlickTunnel’s goal is to make it as easy as possible for everyday people to buy a bond.
               </p>
             </div>
           </div>
@@ -415,8 +410,7 @@ export default function LandingPage() {
                         >
                           <h4 className="text-green-300 font-bold text-lg mb-2">Macauley Barnhardt</h4>
                           <p>
-                            Vision-driven creator of SlickTunnel. Passionate about user experience, fast feedback loops,
-                            and elegant UI engineering.
+                            Founder & CTO. Violinist, 3D Graphic Designer, and Web Designer. Deeply Passionate about the things he does, all revolving around technology. He built websites as a kid, an AI chatbot, and many Blender projects known all too well by his peers. He’s optimized his life around being a productive citizen.
                           </p>
                         </motion.div>
                       </motion.div>
@@ -428,8 +422,7 @@ export default function LandingPage() {
                     <div className="mt-4 w-[90%] mx-auto bg-zinc-900 border border-green-500 rounded-md px-4 py-4 text-left text-sm text-white shadow-md">
                       <h4 className="text-green-300 font-bold text-lg mb-2">Macauley</h4>
                       <p>
-                        Vision-driven creator of SlickTunnel. Passionate about user experience, fast feedback loops, and
-                        elegant UI engineering.
+                        Founder & CEO. Extremely passionate about solving fundamental problems humanity is facing. Since Prem was a kid, his primary goal was to be as useful to humanity as possible. Came up with the idea for SlickTunnel 3 years ago, after trying to buy a bond, and realizing how rigged and flawed the bond market was. Most importantly, Prem never compromises on matters of principle.
                       </p>
                     </div>
                   )}
