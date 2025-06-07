@@ -422,7 +422,7 @@ export default function LandingPage() {
                     <div className="mt-4 w-[90%] mx-auto bg-zinc-900 border border-green-500 rounded-md px-4 py-4 text-left text-sm text-white shadow-md">
                       <h4 className="text-green-300 font-bold text-lg mb-2">Macauley</h4>
                       <p>
-                        Founder & CEO. Extremely passionate about solving fundamental problems humanity is facing. Since Prem was a kid, his primary goal was to be as useful to humanity as possible. Came up with the idea for SlickTunnel 3 years ago, after trying to buy a bond, and realizing how rigged and flawed the bond market was. Most importantly, Prem never compromises on matters of principle.
+                        Founder & CTO. Violinist, 3D Graphic Designer, and Web Designer. Deeply Passionate about the things he does, all revolving around technology. He built websites as a kid, an AI chatbot, and many Blender projects known all too well by his peers. He’s optimized his life around being a productive citizen.
                       </p>
                     </div>
                   )}
@@ -457,8 +457,7 @@ export default function LandingPage() {
                         >
                           <h4 className="text-green-300 font-bold text-lg mb-2">Prem Jain</h4>
                           <p>
-                            Co-founder of SlickTunnel. Specializes in backend, ops, and making everything magically work
-                            under pressure.
+                            Founder & CEO. Extremely passionate about solving fundamental problems humanity is facing. Since Prem was a kid, his primary goal was to be as useful to humanity as possible. Came up with the idea for SlickTunnel 3 years ago, after trying to buy a bond, and realizing how rigged and flawed the bond market was. Most importantly, Prem never compromises on matters of principle.
                           </p>
                         </motion.div>
                       </motion.div>
