@@ -488,7 +488,7 @@ export default function LandingPage() {
 
             {/* RIGHT SIDE headline (desktop only) */}
             {!isMobile && (
-              <div className="w-1/2 hidden md:flex flex-col justify-center items-start pr-6 pl-6">
+              <div className="w-1/2 hidden md:flex flex-col justify-center items-start pr-3 pl-3">
                 <div className="ml-auto">
                   <p className="text-green-400 text-sm font-semibold tracking-widest mb-2 uppercase">
                     Our Team
