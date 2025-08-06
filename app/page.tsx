@@ -527,37 +527,8 @@ export default function LandingPage() {
             </div>
           </section>
         </main>
-        <footer className="w-full border-t bg-background">
-          <div className="container flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between md:py-12">
-            <div className="flex items-center gap-2">
-              <TrendingUp className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold">SlickTunnel</span>
-            </div>
-            <nav className="flex gap-4 sm:gap-6">
-              <button onClick={() => scrollToSection("features")} className="text-sm font-medium hover:text-primary">
-                Features
-              </button>
-
-              <button
-                onClick={() => scrollToSection("how-it-works")}
-                className="text-sm font-medium hover:text-primary"
-              >
-                How It Works
-              </button>
-
-              <button onClick={() => scrollToSection("faq")} className="text-sm font-medium hover:text-primary">
-                FAQ
-              </button>
-            </nav>
-            <div className="flex items-center">
-              <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} SlickTunnel. All rights reserved.
-              </p>
-            </div>
-          </div>
-        </footer>
       </div>
-      <section id="about-us" className="w-full py-12 md:py-22 lg:py-32">
+      <section id="contact" className="w-full py-12 md:py-22 lg:py-32">
         <main className="flex-1">
         <section className="w-full py-12 md:py-24">
           <div className="container px-4 md:px-6">
@@ -625,7 +596,7 @@ export default function LandingPage() {
                 <div className="flex justify-center items-center space-x-2">
                   <Mail className="h-5 w-5 text-green-400" />
                   <a href="mailto:info@slicktunnel.com" className="text-green-300 hover:text-green-200">
-                    info@slicktunnel.com
+                    @slicktunnel.com
                   </a>
                 </div>
               </div>
@@ -641,18 +612,36 @@ export default function LandingPage() {
           </div>
         </section>
       </main>
-
-      <footer className="w-full border-t border-gray-800 bg-black">
-        <div className="container flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between md:py-12">
-          <div className="flex items-center gap-2">
-            <span className="text-xl font-bold text-green-400">SlickTunnel</span>
-          </div>
-          <div className="flex items-center">
-            <p className="text-sm text-gray-400">© {new Date().getFullYear()} SlickTunnel. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
       </section>
+      <footer className="w-full border-t bg-background">
+          <div className="container flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between md:py-12">
+            <div className="flex items-center gap-2">
+              <TrendingUp className="h-6 w-6 text-primary" />
+              <span className="text-xl font-bold">SlickTunnel</span>
+            </div>
+            <nav className="flex gap-4 sm:gap-6">
+              <button onClick={() => scrollToSection("features")} className="text-sm font-medium hover:text-primary">
+                Features
+              </button>
+
+              <button
+                onClick={() => scrollToSection("how-it-works")}
+                className="text-sm font-medium hover:text-primary"
+              >
+                How It Works
+              </button>
+
+              <button onClick={() => scrollToSection("faq")} className="text-sm font-medium hover:text-primary">
+                FAQ
+              </button>
+            </nav>
+            <div className="flex items-center">
+              <p className="text-sm text-muted-foreground">
+                © {new Date().getFullYear()} SlickTunnel. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </footer>
     </>
   )
 }
