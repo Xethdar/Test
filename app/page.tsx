@@ -599,7 +599,7 @@ export default function LandingPage() {
                 <div className="flex justify-center items-center space-x-2">
                   <Mail className="h-5 w-5 text-green-400" />
                   <a href="mailto:info@slicktunnel.com" className="text-green-300 hover:text-green-200">
-                    @slicktunnel.com
+                    Prem@slicktunnel.com
                   </a>
                 </div>
               </div>
