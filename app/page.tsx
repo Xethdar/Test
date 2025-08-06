@@ -108,6 +108,9 @@ export default function LandingPage() {
               <button onClick={() => scrollToSection("about-us")} className="text-sm font-medium hover:text-primary">
                 About Us
               </button>
+              <button onClick={() => scrollToSection("contact")} className="text-sm font-medium hover:text-primary">
+                Contact Us
+              </button>
             </nav>
             <div>
               <Button asChild>
@@ -528,7 +531,7 @@ export default function LandingPage() {
           </section>
         </main>
       </div>
-      <section id="contact" className="w-full py-12 md:py-22 lg:py-32">
+      <section id="contact" className="w-full py-6 md:py-22 lg:py-32">
         <main className="flex-1">
         <section className="w-full py-12 md:py-24">
           <div className="container px-4 md:px-6">
@@ -633,6 +636,9 @@ export default function LandingPage() {
 
               <button onClick={() => scrollToSection("faq")} className="text-sm font-medium hover:text-primary">
                 FAQ
+              </button>
+              <button onClick={() => scrollToSection("contact")} className="text-sm font-medium hover:text-primary">
+                Contact Us
               </button>
             </nav>
             <div className="flex items-center">
