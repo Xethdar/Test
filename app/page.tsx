@@ -377,12 +377,7 @@ export default function LandingPage() {
                 </div>
 
                 <p>
-                  Bonds offer everyday people a smarter, more stable way to grow their money—without the volatility of
-                  the stock market. The Bond Market is a larger and safer market than the Stock Market. It's one of the
-                  best long-term assets to hold. Whether you're saving for a goal or just want reliable passive income,
-                  bonds provide predictable returns, lower risk, and often pay interest regularly. They let you invest
-                  in real companies, governments, or even startups while helping diversify your portfolio. In a world
-                  that glorifies high-risk bets, bonds are the underrated backbone of long-term financial security.
+                  Bonds offer a stable, low-risk way to grow your money, with predictable returns and regular interest payments. They’re part of a larger, safer market than stocks and help diversify your portfolio. Whether you're saving for a goal or seeking passive income, bonds are a smart, long-term investment often overlooked in today’s high-risk market.
                 </p>
               </div>
             </div>
