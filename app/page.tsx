@@ -100,7 +100,7 @@ export default function LandingPage() {
                 onClick={() => scrollToSection("how-it-works")}
                 className="text-sm font-medium hover:text-primary"
               >
-                How It Works
+                How I Works
               </button>
 
               <button onClick={() => scrollToSection("faq")} className="text-sm font-medium hover:text-primary">
