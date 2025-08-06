@@ -532,7 +532,6 @@ export default function LandingPage() {
         </main>
       </div>
       <section id="contact" className="w-full py-3 md:py-11 lg:py-16">
-        <main className="flex-1">
         <section className="w-full py-12 md:py-24">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -614,7 +613,6 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-      </main>
       </section>
       <footer className="w-full border-t bg-background">
           <div className="container flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between md:py-12">
