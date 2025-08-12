@@ -118,7 +118,7 @@ export default function LandingPage() {
                   onClick={() => ScrollToSectionCenter("waitlist")}
                   className="text-sm font-medium hover:text-primary"
                 >
-                  Join Waitlist
+                  Get Started
                 </button>
               </Button>
             </div>
@@ -290,7 +290,7 @@ export default function LandingPage() {
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Join Our Waitlist</h2>
+                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Add your Email</h2>
                   <p className="mx-auto max-w-[700px] md:text-xl/relaxed opacity-90">
                     Be among the first to access our platform when we launch. Early members will have a say in how our
                     platform develops
@@ -317,7 +317,7 @@ export default function LandingPage() {
                           size="lg"
                           className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary border-white"
                         >
-                          <Link href="/survey">Share your ideas and opinions</Link>
+                          <Link href="/news">Get Started</Link>
                         </Button>
                         {hasToken && !showThankYou && (
                           <div>
@@ -384,113 +384,130 @@ export default function LandingPage() {
             </div>
             <section className="w-full py-16 pl-24 bg-black text-white flex flex-col md:flex-row">
               {/* LEFT SIDE (founders) */}
-              <div className="w-full md:w-1/2 pl-20 pr-4 md:pl-20 md:pr-0 space-y-12">
-                <div className={`flex ${isMobile ? "flex-col" : "flex-row"} gap-10 items-center md:items-start`}>
-                  {/* Founder 1 */}
-                  <div className="flex flex-col items-center md:items-start">
-                    <motion.div
-                      onMouseEnter={() => !isMobile && setFocus("founder1")}
-                      onMouseLeave={() => !isMobile && setFocus(null)}
-                      animate={{
-                        x: isMobile ? 0 : focus === "founder2" ? 0 : 0,
-                      }}
-                      transition={{ type: "tween", duration: 0.4 }}
-                      className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
-                    >
-                      <img src="/MacauleySlicktunnelPic.png" alt="Founder 1" className="w-full h-full object-cover" />
+              <div className="w-full md:w-1/2 px-4 md:px-20 space-y-12">
+  <div
+    className={`flex flex-col md:flex-row gap-10 items-center md:items-start`}
+  >
+    {/* Founder 1 */}
+    <div className="flex flex-col items-center md:items-start">
+      <motion.div
+        onMouseEnter={() => !isMobile && setFocus("founder1")}
+        onMouseLeave={() => !isMobile && setFocus(null)}
+        animate={{
+          x: isMobile ? 0 : focus === "founder2" ? 0 : 0,
+        }}
+        transition={{ type: "tween", duration: 0.4 }}
+        className="relative w-[180px] h-[260px] md:w-[200px] md:h-[300px] border-4 border-green-400 rounded-md z-10"
+      >
+        <img
+          src="/MacauleySlicktunnelPic.png"
+          alt="Founder 1"
+          className="w-full h-full object-cover"
+        />
 
-                      {/* Desktop animated hover text */}
-                      {!isMobile && (
-                        <motion.div
-                          initial={{ x: 0 }}
-                          animate={{ x: focus === "founder1" ? 210 : 0 }}
-                          transition={{ type: "tween", duration: 0.4 }}
-                          className="absolute top-0 left-0 h-full"
-                        >
-                          <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: focus === "founder1" ? 1 : 0 }}
-                            transition={{ duration: 0.4 }}
-                            className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
-                          >
-                            <h4 className="text-green-300 font-bold text-lg mb-2">Macauley Barnhardt</h4>
-                            <p>
-                              Founder & CTO. Violinist, 3D Graphic Designer, and Web Designer. Deeply Passionate about
-                              the things he does, all revolving around technology. He built websites as a kid, an AI
-                              chatbot, and many Blender projects known all too well by his peers. He's optimized his
-                              life around being a productive citizen.
-                            </p>
-                          </motion.div>
-                        </motion.div>
-                      )}
-                    </motion.div>
+        {/* Desktop hover card */}
+        {!isMobile && (
+          <motion.div
+            initial={{ x: 0 }}
+            animate={{ x: focus === "founder1" ? 210 : 0 }}
+            transition={{ type: "tween", duration: 0.4 }}
+            className="absolute top-0 left-0 h-full"
+          >
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: focus === "founder1" ? 1 : 0 }}
+              transition={{ duration: 0.4 }}
+              className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
+            >
+              <h4 className="text-green-300 font-bold text-lg mb-2">
+                Macauley Barnhardt
+              </h4>
+              <p>
+                Founder & CTO. Violinist, 3D Graphic Designer, and Web Designer.
+                Deeply passionate about technology and creativity. Built
+                websites as a kid, created an AI chatbot, and developed
+                impressive Blender projects.
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
+      </motion.div>
 
-                    {/* Mobile static text */}
-                    {isMobile && (
-                      <div className="mt-4 w-[90%] mx-auto bg-zinc-900 border border-green-500 rounded-md px-4 py-4 text-left text-sm text-white shadow-md">
-                        <h4 className="text-green-300 font-bold text-lg mb-2">Macauley</h4>
-                        <p>
-                          Founder & CTO. Violinist, 3D Graphic Designer, and Web Designer. Deeply Passionate about the
-                          things he does, all revolving around technology. He built websites as a kid, an AI chatbot,
-                          and many Blender projects known all too well by his peers. He's optimized his life around
-                          being a productive citizen.
-                        </p>
-                      </div>
-                    )}
-                  </div>
+      {/* Mobile static text */}
+      {isMobile && (
+        <div className="mt-4 w-full max-w-xs bg-zinc-900 border border-green-500 rounded-md px-4 py-4 text-left text-sm text-white shadow-md">
+          <h4 className="text-green-300 font-bold text-lg mb-2">Macauley</h4>
+          <p>
+            Founder & CTO. Violinist, 3D Graphic Designer, and Web Designer.
+            Passionate about tech and design. Built an AI chatbot, websites,
+            and numerous Blender projects.
+          </p>
+        </div>
+      )}
+    </div>
 
-                  {/* Founder 2 */}
-                  <div className="flex flex-col items-center md:items-start">
-                    <motion.div
-                      onMouseEnter={() => !isMobile && setFocus("founder2")}
-                      onMouseLeave={() => !isMobile && setFocus(null)}
-                      animate={{
-                        x: isMobile ? 0 : focus === "founder1" ? 290 : focus === "founder2" ? 0 : 0,
-                      }}
-                      transition={{ type: "tween", duration: 0.4 }}
-                      className="relative w-[200px] h-[300px] border-4 border-green-400 rounded-md z-10"
-                    >
-                      <img src="/PremSlicktunnelPic.png" alt="Founder 2" className="w-full h-full object-cover" />
+    {/* Founder 2 */}
+    <div className="flex flex-col items-center md:items-start">
+      <motion.div
+        onMouseEnter={() => !isMobile && setFocus("founder2")}
+        onMouseLeave={() => !isMobile && setFocus(null)}
+        animate={{
+          x: isMobile
+            ? 0
+            : focus === "founder1"
+            ? 290
+            : focus === "founder2"
+            ? 0
+            : 0,
+        }}
+        transition={{ type: "tween", duration: 0.4 }}
+        className="relative w-[180px] h-[260px] md:w-[200px] md:h-[300px] border-4 border-green-400 rounded-md z-10"
+      >
+        <img
+          src="/PremSlicktunnelPic.png"
+          alt="Founder 2"
+          className="w-full h-full object-cover"
+        />
 
-                      {/* Desktop animated hover text */}
-                      {!isMobile && (
-                        <motion.div
-                          initial={{ x: 0 }}
-                          animate={{ x: focus === "founder2" ? 210 : 0 }}
-                          transition={{ type: "tween", duration: 0.4 }}
-                          className="absolute top-0 left-0 h-full"
-                        >
-                          <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: focus === "founder2" ? 1 : 0 }}
-                            transition={{ duration: 0.4 }}
-                            className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
-                          >
-                            <h4 className="text-green-300 font-bold text-lg mb-2">Prem Jain</h4>
-                            <p>
-                              Founder & CEO. Extremely passionate about solving fundamental problems humanity is facing.
-                              Since Prem was a kid, his primary goal was to be as useful to humanity as possible. Came
-                              up with the idea for SlickTunnel 3 years ago, after trying to buy a bond, and realizing
-                              how flawed the bond market was. He never compromises on matters of principle.
-                            </p>
-                          </motion.div>
-                        </motion.div>
-                      )}
-                    </motion.div>
+        {/* Desktop hover card */}
+        {!isMobile && (
+          <motion.div
+            initial={{ x: 0 }}
+            animate={{ x: focus === "founder2" ? 210 : 0 }}
+            transition={{ type: "tween", duration: 0.4 }}
+            className="absolute top-0 left-0 h-full"
+          >
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: focus === "founder2" ? 1 : 0 }}
+              transition={{ duration: 0.4 }}
+              className="w-[300px] h-full bg-zinc-900 border border-green-500 rounded-md px-6 py-8 text-left text-sm text-white shadow-xl"
+            >
+              <h4 className="text-green-300 font-bold text-lg mb-2">Prem Jain</h4>
+              <p>
+                Founder & CEO. Dedicated to solving fundamental problems facing
+                humanity. Conceived the SlickTunnel idea after seeing flaws in
+                the bond market firsthand. Known for never compromising on
+                principles.
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
+      </motion.div>
 
-                    {/* Mobile static text */}
-                    {isMobile && (
-                      <div className="mt-4 w-[90%] mx-auto bg-zinc-900 border border-green-500 rounded-md px-4 py-4 text-left text-sm text-white shadow-md">
-                        <h4 className="text-green-300 font-bold text-lg mb-2">Prem Jain</h4>
-                        <p>
-                          Co-founder of SlickTunnel. Specializes in backend, ops, and making everything magically work
-                          under pressure.
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
+      {/* Mobile static text */}
+      {isMobile && (
+        <div className="mt-4 w-full max-w-xs bg-zinc-900 border border-green-500 rounded-md px-4 py-4 text-left text-sm text-white shadow-md">
+          <h4 className="text-green-300 font-bold text-lg mb-2">Prem Jain</h4>
+          <p>
+            Co-founder of SlickTunnel. Backend and operations expert, keeping
+            everything running smoothly even under pressure.
+          </p>
+        </div>
+      )}
+    </div>
+  </div>
+</div>
 
               {/* RIGHT SIDE headline (desktop only) */}
               {!isMobile && (
@@ -609,6 +626,14 @@ export default function LandingPage() {
                   Follow us on social media for the latest updates, bond market insights, and more.
                 </p>
                 <div className="flex justify-center space-x-4">{/* Social media icons would go here */}</div>
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary border-white"
+                >
+                  <Link href="/survey">Share your Feedback and Ideas</Link>
+                </Button>
               </div>
             </div>
           </div>
