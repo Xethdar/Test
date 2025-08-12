@@ -382,7 +382,7 @@ export default function LandingPage() {
                 </p>
               </div>
             </div>
-            <section className="w-full py-16 pl-4 md:pl-24 bg-black text-white flex flex-col md:flex-row">
+            <section className="w-full py-16 pl-0 md:pl-24 bg-black text-white flex flex-col md:flex-row">
               {/* LEFT SIDE (founders) */}
               <div className="w-full md:w-1/2 px-4 md:pl-20 md:pr-0 space-y-12 mx-auto">
   <div
