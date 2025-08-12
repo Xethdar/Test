@@ -84,43 +84,44 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white">
       {/* HEADER */}
       <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
-          <div className="flex items-center gap-2">
-            <TrendingUp className="h-6 w-6 text-green-400" />
-            <span className="text-xl font-bold">SlickTunnel</span>
-          </div>
-          <nav className="hidden md:flex gap-6">
-            {[
-              { label: "Features", id: "features" },
-              { label: "How It Works", id: "how-it-works" },
-              { label: "FAQ", id: "faq" },
-              { label: "About Us", id: "about-us" },
-              { label: "Contact Us", id: "contact" },
-            ].map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-sm font-medium hover:text-green-400 transition-colors"
-              >
-                {item.label}
-              </button>
-            ))}
-          </nav>
-          <div>
-            <button
-              onClick={() =>
-                document
-                  .getElementById("waitlist")
-                  ?.scrollIntoView({ behavior: "smooth", block: "center" })
-              }
-              className="text-sm font-medium bg-green-400 text-black px-4 py-2 rounded hover:opacity-90 transition-opacity"
-            >
-              Join Waitlist
-            </button>
-          </div>
-        </div>
-      </header>
+      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
+        <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <TrendingUp className="h-6 w-6 text-green-400" />
+          <span className="text-xl font-bold">SlickTunnel</span>
+        </Link>
 
+        <nav className="hidden md:flex gap-6">
+          {[
+            { label: "Features", id: "features" },
+            { label: "How It Works", id: "how-it-works" },
+            { label: "FAQ", id: "faq" },
+            { label: "About Us", id: "about-us" },
+            { label: "Contact Us", id: "contact" },
+          ].map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="text-sm font-medium hover:text-green-400 transition-colors"
+            >
+              {item.label}
+            </button>
+          ))}
+        </nav>
+
+        <div>
+          <button
+            onClick={() =>
+              document
+                .getElementById("waitlist")
+                ?.scrollIntoView({ behavior: "smooth", block: "center" })
+            }
+            className="text-sm font-medium bg-green-400 text-black px-4 py-2 rounded hover:opacity-90 transition-opacity"
+          >
+            Join Waitlist
+          </button>
+        </div>
+      </div>
+    </header>
       {/* MAIN CONTENT */}
       <main className="max-w-4xl mx-auto px-4 md:px-8 py-8">
         <h2 className="text-2xl font-semibold mb-6 text-center">
