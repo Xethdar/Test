@@ -74,6 +74,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      {/* HEADER */}
       <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
           <div className="flex items-center gap-2">
@@ -116,6 +117,7 @@ export default function Home() {
         </div>
       </header>
 
+      {/* MAIN CONTENT */}
       <main className="max-w-4xl mx-auto px-4 md:px-8 py-8">
         <h2 className="text-2xl font-semibold mb-6 text-center">
           Latest Bond News
@@ -126,7 +128,10 @@ export default function Home() {
         <ul className="space-y-4 mt-6">
           {currentArticles.length > 0 ? (
             currentArticles.map((article, index) => (
-              <li key={index} className="border-b border-gray-700 pb-4">
+              <li
+                key={index}
+                className="border border-green-400 rounded-lg p-4 shadow-sm hover:shadow-green-500/30 hover:bg-green-500/5 transition-all duration-200"
+              >
                 <a
                   href={article.url}
                   target="_blank"
