@@ -33,6 +33,14 @@ export default function Home() {
   const indexOfFirst = indexOfLast - articlesPerPage;
   const currentArticles = articles.slice(indexOfFirst, indexOfLast);
 
+  const scrollToSection = (id: string) => {
+    if (window.location.pathname !== "/") {
+      window.location.href = `/#${id}`;
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -91,11 +99,7 @@ export default function Home() {
             ].map((item) => (
               <button
                 key={item.id}
-                onClick={() =>
-                  document
-                    .getElementById(item.id)
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
+                onClick={() => scrollToSection(item.id)}
                 className="text-sm font-medium hover:text-green-400 transition-colors"
               >
                 {item.label}
