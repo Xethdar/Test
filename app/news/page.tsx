@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     async function fetchArticles() {
       try {
-        const res = await fetch("/api/news");
+        const res = await fetch("/news/api/news");
         if (!res.ok) {
           console.error("API returned status:", res.status);
           setArticles([]);
