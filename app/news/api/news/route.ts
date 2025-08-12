@@ -1,4 +1,4 @@
-// app/api/news/route.ts
+// app/news/api/news/route.ts
 import { NextResponse } from "next/server";
 
 export async function GET() {

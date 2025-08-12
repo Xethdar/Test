@@ -7,25 +7,21 @@ export default function Home() {
   const [articles, setArticles] = useState<any[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 10;
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchArticles() {
       try {
-        const res = await fetch("/news/api/news");
-        if (!res.ok) {
-          console.error("API returned status:", res.status);
-          setArticles([]);
-          return;
-        }
-
+        const res = await fetch("/news/api/news"); // Match your folder structure
         const data = await res.json();
-        setArticles(data.articles || []);
+
+        if (Array.isArray(data.articles)) {
+          setArticles(data.articles);
+        } else {
+          setArticles([]);
+        }
       } catch (error) {
         console.error("Error fetching news:", error);
         setArticles([]);
-      } finally {
-        setLoading(false);
       }
     }
 
@@ -125,35 +121,29 @@ export default function Home() {
           Latest Bond News
         </h2>
 
-        {loading && <p className="text-center">Loading news...</p>}
+        {totalPages > 1 && <Pagination />}
 
-        {!loading && articles.length === 0 && (
-          <p className="text-center">No news articles available.</p>
-        )}
+        <ul className="space-y-4 mt-6">
+          {currentArticles.length > 0 ? (
+            currentArticles.map((article, index) => (
+              <li key={index} className="border-b border-gray-700 pb-4">
+                <a
+                  href={article.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block hover:text-green-400 transition-colors"
+                >
+                  <h3 className="text-lg font-bold">{article.title}</h3>
+                  <p className="text-gray-400 text-sm">{article.description}</p>
+                </a>
+              </li>
+            ))
+          ) : (
+            <li>No news articles available.</li>
+          )}
+        </ul>
 
-        {!loading && articles.length > 0 && (
-          <>
-            {totalPages > 1 && <Pagination />}
-
-            <ul className="space-y-4 mt-6">
-              {currentArticles.map((article, index) => (
-                <li key={index} className="border-b border-gray-700 pb-4">
-                  <a
-                    href={article.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block hover:text-green-400 transition-colors"
-                  >
-                    <h3 className="text-lg font-bold">{article.title}</h3>
-                    <p className="text-gray-400 text-sm">{article.description}</p>
-                  </a>
-                </li>
-              ))}
-            </ul>
-
-            {totalPages > 1 && <Pagination />}
-          </>
-        )}
+        {totalPages > 1 && <Pagination />}
       </main>
     </div>
   );
