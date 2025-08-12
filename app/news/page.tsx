@@ -11,8 +11,19 @@ export default function Home() {
   useEffect(() => {
     async function fetchArticles() {
       try {
-        const res = await fetch("/api/news"); // Replace with your API endpoint
+        const apiKey = process.env.NEXT_PUBLIC_NEWS_API_KEY;
+
+        if (!apiKey) {
+          console.error("Missing NEXT_PUBLIC_NEWS_API_KEY environment variable.");
+          setArticles([]);
+          return;
+        }
+
+        const res = await fetch(
+          `https://newsapi.org/v2/everything?q=bonds&sortBy=publishedAt&apiKey=${apiKey}`
+        );
         const data = await res.json();
+
         if (Array.isArray(data.articles)) {
           setArticles(data.articles);
         } else {
@@ -23,10 +34,10 @@ export default function Home() {
         setArticles([]);
       }
     }
+
     fetchArticles();
   }, []);
 
-  // Pagination logic
   const totalPages = Math.ceil(articles.length / articlesPerPage);
   const indexOfLast = currentPage * articlesPerPage;
   const indexOfFirst = indexOfLast - articlesPerPage;
@@ -73,16 +84,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* HEADER */}
       <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
-          {/* Logo */}
           <div className="flex items-center gap-2">
             <TrendingUp className="h-6 w-6 text-green-400" />
             <span className="text-xl font-bold">SlickTunnel</span>
           </div>
-
-          {/* Navigation */}
           <nav className="hidden md:flex gap-6">
             {[
               { label: "Features", id: "features" },
@@ -104,8 +111,6 @@ export default function Home() {
               </button>
             ))}
           </nav>
-
-          {/* Call to Action */}
           <div>
             <button
               onClick={() =>
@@ -121,16 +126,13 @@ export default function Home() {
         </div>
       </header>
 
-      {/* MAIN CONTENT */}
       <main className="max-w-4xl mx-auto px-4 md:px-8 py-8">
         <h2 className="text-2xl font-semibold mb-6 text-center">
           Latest Bond News
         </h2>
 
-        {/* Top Pagination */}
         {totalPages > 1 && <Pagination />}
 
-        {/* Articles */}
         <ul className="space-y-4 mt-6">
           {currentArticles.length > 0 ? (
             currentArticles.map((article, index) => (
@@ -151,7 +153,6 @@ export default function Home() {
           )}
         </ul>
 
-        {/* Bottom Pagination */}
         {totalPages > 1 && <Pagination />}
       </main>
     </div>
