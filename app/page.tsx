@@ -384,7 +384,7 @@ export default function LandingPage() {
             </div>
             <section className="w-full py-16 pl-24 bg-black text-white flex flex-col md:flex-row">
               {/* LEFT SIDE (founders) */}
-              <div className="w-full md:w-1/2 px-4 md:px-20 space-y-12">
+              <div className="w-full md:w-1/2 px-4 md:pl-20 md:pr-0 space-y-12 mx-auto">
   <div
     className={`flex flex-col md:flex-row gap-10 items-center md:items-start`}
   >
@@ -548,9 +548,9 @@ export default function LandingPage() {
           </section>
         </main>
       </div>
-      <section id="contact" className="w-full py-3 md:py-11 lg:py-16">
-        <section className="w-full py-12 md:py-24">
-          <div className="container px-4 md:px-6">
+      <section id="contact" className="w-full pt-[4rem] pb-3 md:pb-11 lg:pb-16">
+  <section className="w-full py-12 md:py-24">
+    <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-green-400">Contact Us</h1>
