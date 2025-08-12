@@ -382,7 +382,7 @@ export default function LandingPage() {
                 </p>
               </div>
             </div>
-            <section className="w-full py-16 pl-10 bg-black text-white flex flex-col md:flex-row">
+            <section className="w-full py-16 pl-4 md:pl-24 bg-black text-white flex flex-col md:flex-row">
               {/* LEFT SIDE (founders) */}
               <div className="w-full md:w-1/2 px-4 md:pl-20 md:pr-0 space-y-12 mx-auto">
   <div
@@ -632,7 +632,17 @@ export default function LandingPage() {
                   size="lg"
                   className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary border-white"
                 >
-                  <Link href="/survey">Share your Feedback and Ideas</Link>
+                  <button
+                    onClick={() => {
+                      if (hasToken) {
+                        window.location.href = "/survey"
+                      } else {
+                        document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" })
+                      }
+                    }}
+                  >
+                    Share your Feedback and Ideas
+                  </button>
                 </Button>
               </div>
             </div>
