@@ -7,22 +7,24 @@ export default function Home() {
   const [articles, setArticles] = useState<any[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 10;
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchArticles() {
       try {
-        const res = await fetch("/news/api/news");
-        if (!res.ok) throw new Error("Failed to fetch news");
+        const res = await fetch("/api/news");
         const data = await res.json();
-        setArticles(Array.isArray(data.articles) ? data.articles : []);
+
+        if (Array.isArray(data.articles)) {
+          setArticles(data.articles);
+        } else {
+          setArticles([]);
+        }
       } catch (error) {
         console.error("Error fetching news:", error);
         setArticles([]);
-      } finally {
-        setLoading(false);
       }
     }
+
     fetchArticles();
   }, []);
 
@@ -37,7 +39,7 @@ export default function Home() {
   };
 
   const Pagination = () => (
-    <div className="flex justify-center gap-2 mt-6">
+    <div className="flex justify-center gap-2 mt-6 flex-wrap">
       <button
         disabled={currentPage === 1}
         onClick={() => handlePageChange(currentPage - 1)}
@@ -72,7 +74,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60">
+      <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/95 backdrop-blur">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
           <div className="flex items-center gap-2">
             <TrendingUp className="h-6 w-6 text-green-400" />
@@ -119,33 +121,29 @@ export default function Home() {
           Latest Bond News
         </h2>
 
-        {loading ? (
-          <p className="text-center text-gray-400">Loading news...</p>
-        ) : articles.length === 0 ? (
-          <p className="text-center text-gray-400">No news articles available.</p>
-        ) : (
-          <>
-            {totalPages > 1 && <Pagination />}
+        {totalPages > 1 && <Pagination />}
 
-            <ul className="space-y-4 mt-6">
-              {currentArticles.map((article, index) => (
-                <li key={index} className="border-b border-gray-700 pb-4">
-                  <a
-                    href={article.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block hover:text-green-400 transition-colors"
-                  >
-                    <h3 className="text-lg font-bold">{article.title}</h3>
-                    <p className="text-gray-400 text-sm">{article.description}</p>
-                  </a>
-                </li>
-              ))}
-            </ul>
+        <ul className="space-y-4 mt-6">
+          {currentArticles.length > 0 ? (
+            currentArticles.map((article, index) => (
+              <li key={index} className="border-b border-gray-700 pb-4">
+                <a
+                  href={article.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block hover:text-green-400 transition-colors"
+                >
+                  <h3 className="text-lg font-bold">{article.title}</h3>
+                  <p className="text-gray-400 text-sm">{article.description}</p>
+                </a>
+              </li>
+            ))
+          ) : (
+            <li>No news articles available.</li>
+          )}
+        </ul>
 
-            {totalPages > 1 && <Pagination />}
-          </>
-        )}
+        {totalPages > 1 && <Pagination />}
       </main>
     </div>
   );
