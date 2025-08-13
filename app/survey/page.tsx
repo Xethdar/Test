@@ -40,7 +40,7 @@ export default function SurveyPage() {
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <TrendingUp className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">SlickTunnel</span>
+            <span className="text-xl font-bold"><Link href="/">SlickTunnel</Link></span>
           </Link>
           <Button variant="outline" asChild onClick={handleToken}>
             <Link href="/" className="flex items-center gap-2">
