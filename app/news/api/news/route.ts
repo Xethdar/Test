@@ -12,7 +12,7 @@ export async function GET() {
     }
 
     const res = await fetch(
-      `https://newsapi.org/v2/everything?q=bonds&sortBy=publishedAt&apiKey=${apiKey}`
+      `https://newsapi.org/v2/everything?q=financialbonds&sortBy=publishedAt&apiKey=${apiKey}`
     );
 
     if (!res.ok) {
