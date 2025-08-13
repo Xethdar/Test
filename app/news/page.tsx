@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { TrendingUp } from "lucide-react";
+import Link from 'next/link'
 
 export default function Home() {
   const [articles, setArticles] = useState<any[]>([]);
