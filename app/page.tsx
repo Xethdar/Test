@@ -548,7 +548,7 @@ export default function LandingPage() {
           </section>
         </main>
       </div>
-      <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+      <section id="contact" className="w-full pt-[4rem] pb-3 md:pb-11 lg:pb-16">
   <section className="w-full py-12 md:py-24">
     <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -563,7 +563,7 @@ export default function LandingPage() {
             <div className="mx-auto grid max-w-5xl gap-10 py-12 md:grid-cols-2">
               {/* Prem Contact Card */}
               <div className="flex flex-col items-center space-y-4 rounded-lg border border-green-500/30 bg-zinc-900 p-6">
-                <div className="relative h-[200px] w-[200px] overflow-hidden rounded-lg border-4 border-green-400">
+                <div className="relative h-[200px] w-[200px] rounded-lg border-4 border-green-400">
                   <img src="/PremSlicktunnelPic.png" alt="Prem Jain" className="h-full w-full object-cover" />
                 </div>
                 <div className="space-y-2 text-center">
@@ -583,7 +583,7 @@ export default function LandingPage() {
 
               {/* Macauley Contact Card */}
               <div className="flex flex-col items-center space-y-4 rounded-lg border border-green-500/30 bg-zinc-900 p-6">
-                <div className="relative h-[200px] w-[200px] overflow-hidden rounded-lg border-4 border-green-400">
+                <div className="relative h-[200px] w-[200px] rounded-lg border-4 border-green-400">
                   <img
                     src="/MacauleySlicktunnelPic.png"
                     alt="Macauley Barnhardt"
