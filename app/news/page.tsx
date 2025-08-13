@@ -88,7 +88,7 @@ export default function Home() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
         <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           <TrendingUp className="h-6 w-6 text-green-400" />
-          <span className="text-xl font-bold">SlickTunnel</span>
+          <span className="text-xl font-bold"><Link href="/">SlickTunnel</Link></span>
         </Link>
 
         <nav className="hidden md:flex gap-6">
