@@ -548,142 +548,141 @@ export default function LandingPage() {
           </section>
         </main>
       </div>
-      <section id="contact" className="w-full pt-[4rem] pb-3 md:pb-11 lg:pb-16">
-  <section className="w-full py-12 md:py-24">
-    <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-green-400">Contact Us</h1>
-                <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl/relaxed">
-                  Have questions about SlickTunnel? We're here to help. Reach out to our team directly.
-                </p>
-              </div>
-            </div>
+      <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+  <div className="container px-4 md:px-6">
+    <div className="flex flex-col items-center justify-center space-y-4 text-center">
+      <div className="space-y-2">
+        <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-green-400">Contact Us</h1>
+        <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl/relaxed">
+          Have questions about SlickTunnel? We're here to help. Reach out to our team directly.
+        </p>
+      </div>
+    </div>
 
-            <div className="mx-auto grid max-w-5xl gap-10 py-12 md:grid-cols-2">
-              {/* Prem Contact Card */}
-              <div className="flex flex-col items-center space-y-4 rounded-lg border border-green-500/30 bg-zinc-900 p-6">
-                <div className="relative h-[200px] w-[200px] rounded-lg border-4 border-green-400">
-                  <img src="/PremSlicktunnelPic.png" alt="Prem Jain" className="h-full w-full object-cover" />
-                </div>
-                <div className="space-y-2 text-center">
-                  <h2 className="text-2xl font-bold text-green-400">Prem Jain</h2>
-                  <p className="text-gray-300">Founder & CEO</p>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="h-5 w-5 text-green-400" />
-                  <a href="mailto:Prem@slicktunnel.com" className="text-green-300 hover:text-green-200">
-                    Prem@slicktunnel.com
-                  </a>
-                </div>
-                <Button className="bg-green-600 hover:bg-green-700 text-white">
-                  <a href="mailto:Prem@slicktunnel.com">Send Email</a>
-                </Button>
-              </div>
+    <div className="mx-auto grid max-w-5xl gap-10 py-12 md:grid-cols-2">
+      {/* Prem Contact Card */}
+      <div className="flex flex-col items-center space-y-4 rounded-lg border border-green-500/30 bg-zinc-900 p-6">
+        <div className="relative h-[200px] w-[200px] rounded-lg border-4 border-green-400">
+          <img src="/PremSlicktunnelPic.png" alt="Prem Jain" className="h-full w-full object-cover" />
+        </div>
+        <div className="space-y-2 text-center">
+          <h2 className="text-2xl font-bold text-green-400">Prem Jain</h2>
+          <p className="text-gray-300">Founder & CEO</p>
+        </div>
+        <div className="flex items-center space-x-2">
+          <Mail className="h-5 w-5 text-green-400" />
+          <a href="mailto:Prem@slicktunnel.com" className="text-green-300 hover:text-green-200">
+            Prem@slicktunnel.com
+          </a>
+        </div>
+        <Button className="bg-green-600 hover:bg-green-700 text-white">
+          <a href="mailto:Prem@slicktunnel.com">Send Email</a>
+        </Button>
+      </div>
 
-              {/* Macauley Contact Card */}
-              <div className="flex flex-col items-center space-y-4 rounded-lg border border-green-500/30 bg-zinc-900 p-6">
-                <div className="relative h-[200px] w-[200px] rounded-lg border-4 border-green-400">
-                  <img
-                    src="/MacauleySlicktunnelPic.png"
-                    alt="Macauley Barnhardt"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="space-y-2 text-center">
-                  <h2 className="text-2xl font-bold text-green-400">Macauley Barnhardt</h2>
-                  <p className="text-gray-300">Founder & CTO</p>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="h-5 w-5 text-green-400" />
-                  <a href="mailto:Macauley@slicktunnel.com" className="text-green-300 hover:text-green-200">
-                    Macauley@slicktunnel.com
-                  </a>
-                </div>
-                <Button className="bg-green-600 hover:bg-green-700 text-white">
-                  <a href="mailto:Macauley@slicktunnel.com">Send Email</a>
-                </Button>
-              </div>
-            </div>
+      {/* Macauley Contact Card */}
+      <div className="flex flex-col items-center space-y-4 rounded-lg border border-green-500/30 bg-zinc-900 p-6">
+        <div className="relative h-[200px] w-[200px] rounded-lg border-4 border-green-400">
+          <img
+            src="/MacauleySlicktunnelPic.png"
+            alt="Macauley Barnhardt"
+            className="h-full w-full object-cover"
+          />
+        </div>
+        <div className="space-y-2 text-center">
+          <h2 className="text-2xl font-bold text-green-400">Macauley Barnhardt</h2>
+          <p className="text-gray-300">Founder & CTO</p>
+        </div>
+        <div className="flex items-center space-x-2">
+          <Mail className="h-5 w-5 text-green-400" />
+          <a href="mailto:Macauley@slicktunnel.com" className="text-green-300 hover:text-green-200">
+            Macauley@slicktunnel.com
+          </a>
+        </div>
+        <Button className="bg-green-600 hover:bg-green-700 text-white">
+          <a href="mailto:Macauley@slicktunnel.com">Send Email</a>
+        </Button>
+      </div>
+    </div>
 
-            <div className="mx-auto max-w-3xl space-y-8 text-center">
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-green-400">General Inquiries</h2>
-                <p className="text-gray-300">
-                  For general questions, partnership opportunities, or other inquiries, please reach out to us at:
-                </p>
-                <div className="flex justify-center items-center space-x-2">
-                  <Mail className="h-5 w-5 text-green-400" />
-                  <a href="mailto:info@slicktunnel.com" className="text-green-300 hover:text-green-200">
-                    Prem@slicktunnel.com
-                  </a>
-                </div>
-              </div>
+    <div className="mx-auto max-w-3xl space-y-12 text-center">
+      <div className="space-y-4">
+        <h2 className="text-2xl font-bold text-green-400">General Inquiries</h2>
+        <p className="text-gray-300">
+          For general questions, partnership opportunities, or other inquiries, please reach out to us at:
+        </p>
+        <div className="flex justify-center items-center space-x-2">
+          <Mail className="h-5 w-5 text-green-400" />
+          <a href="mailto:info@slicktunnel.com" className="text-green-300 hover:text-green-200">
+            info@slicktunnel.com
+          </a>
+        </div>
+      </div>
 
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-green-400">Connect With Us</h2>
-                <p className="text-gray-300">
-                  Follow us on social media for the latest updates, bond market insights, and more.
-                </p>
-                <div className="flex justify-center space-x-4">{/* Social media icons would go here */}</div>
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary border-white"
-                >
-                  <button
-                    onClick={() => {
-                      if (hasToken) {
-                        window.location.href = "/survey"
-                      } else {
-                        document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" })
-                      }
-                    }}
-                  >
-                    Share your Feedback and Ideas
-                  </button>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
+      <div className="space-y-4">
+        <h2 className="text-2xl font-bold text-green-400">Connect With Us</h2>
+        <p className="text-gray-300">
+          Follow us on social media for the latest updates, bond market insights, and more.
+        </p>
+        <div className="flex justify-center space-x-4">{/* Social media icons */}</div>
+        <Button
+          asChild
+          variant="outline"
+          size="lg"
+          className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary border-white"
+        >
+          <button
+            onClick={() => {
+              if (hasToken) {
+                window.location.href = "/survey"
+              } else {
+                document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" })
+              }
+            }}
+          >
+            Share your Feedback and Ideas
+          </button>
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>
       <footer className="w-full border-t bg-background">
-          <div className="container flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between md:py-12">
-            <div className="flex items-center gap-2">
-              <TrendingUp className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold">SlickTunnel</span>
-            </div>
-            <nav className="flex gap-4 sm:gap-6">
-              <button onClick={() => scrollToSection("features")} className="text-sm font-medium hover:text-primary">
-                Features
-              </button>
+  <div className="container flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-center md:py-12">
+    {/* Left logo */}
+    <div className="flex items-center gap-2 md:absolute md:left-8">
+      <TrendingUp className="h-6 w-6 text-primary" />
+      <span className="text-xl font-bold">SlickTunnel</span>
+    </div>
 
-              <button
-                onClick={() => scrollToSection("how-it-works")}
-                className="text-sm font-medium hover:text-primary"
-              >
-                How It Works
-              </button>
+    {/* Center nav */}
+    <nav className="flex gap-4 sm:gap-6 justify-center">
+      <button onClick={() => scrollToSection("features")} className="text-sm font-medium hover:text-primary">
+        Features
+      </button>
+      <button onClick={() => scrollToSection("how-it-works")} className="text-sm font-medium hover:text-primary">
+        How It Works
+      </button>
+      <button onClick={() => scrollToSection("faq")} className="text-sm font-medium hover:text-primary">
+        FAQ
+      </button>
+      <button onClick={() => scrollToSection("about-us")} className="text-sm font-medium hover:text-primary">
+        About Us
+      </button>
+      <button onClick={() => scrollToSection("contact")} className="text-sm font-medium hover:text-primary">
+        Contact Us
+      </button>
+    </nav>
 
-              <button onClick={() => scrollToSection("faq")} className="text-sm font-medium hover:text-primary">
-                FAQ
-              </button>
-              <button onClick={() => scrollToSection("about-us")} className="text-sm font-medium hover:text-primary">
-                About Us
-              </button>
-              <button onClick={() => scrollToSection("contact")} className="text-sm font-medium hover:text-primary">
-                Contact Us
-              </button>
-            </nav>
-            <div className="flex items-center">
-              <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} SlickTunnel. All rights reserved.
-              </p>
-            </div>
-          </div>
-        </footer>
+    {/* Right copyright */}
+    <div className="flex items-center md:absolute md:right-8">
+      <p className="text-sm text-muted-foreground">
+        © {new Date().getFullYear()} SlickTunnel. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
     </>
   )
 }
